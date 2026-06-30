@@ -1,0 +1,430 @@
+Linus Torvalds <torvalds@linux-foundation.org>	git	origin	-	master	yes
+-	switch	fs-current	master
+Theodore Ts'o <tytso@mit.edu>	git	ext4-fixes	-	fixes	no
+Christian Brauner <brauner@kernel.org>	git	vfs-brauner-fixes	-	vfs.fixes	no
+Eric Biggers <ebiggers@kernel.org>, Theodore Ts'o <tytso@mit.edu>, Jaegeuk Kim <jaegeuk@kernel.org>	git	fscrypt-current	-	for-current	no
+Eric Biggers <ebiggers@kernel.org>, Theodore Ts'o <tytso@mit.edu>	git	fsverity-current	-	for-current	no
+David Sterba <dsterba@suse.cz>	git	btrfs-fixes	-	next-fixes	no
+Al Viro <viro@ZenIV.linux.org.uk>	git	vfs-fixes	-	fixes	no
+Gao Xiang <xiang@kernel.org>	git	erofs-fixes	-	fixes	no
+Chuck Lever <chuck.lever@oracle.com>	git	nfsd-fixes	-	nfsd-fixes	no
+Eric Van Hensbergen <ericvh@gmail.com>	git	v9fs-fixes	-	fixes/next	no
+Miklos Szeredi <miklos@szeredi.hu>, Amir Goldstein <amir73il@gmail.com>	git	overlayfs-fixes	-	ovl-fixes	yes
+-	switch	fs-next	fs-current
+Eric Biggers <ebiggers@kernel.org>, Theodore Ts'o <tytso@mit.edu>, Jaegeuk Kim <jaegeuk@kernel.org>	git	fscrypt	-	for-next	no
+David Sterba <dsterba@suse.cz>	git	btrfs	-	for-next	no
+Jeff Layton <jlayton@kernel.org>, Ilya Dryomov <idryomov@gmail.com>	git	ceph	-	master	no
+Steve French <smfrench@gmail.com>, CIFS <linux-cifs@vger.kernel.org>	git	cifs	-	for-next	no
+Andreas Hindborg <a.hindborg@kernel.org>	git	configfs	-	configfs-next	no
+Tyler Hicks <code@tyhicks.com>	git	ecryptfs	-	next	no
+David Teigland <teigland@redhat.com>	git	dlm	-	next	no
+Gao Xiang <xiang@kernel.org>	git	erofs	-	dev	no
+Namjae Jeon <linkinjeon@kernel.org>	git	exfat	-	dev	no
+Jan Kara <jack@suse.cz>	git	ext3	-	for_next	no
+Theodore Ts'o <tytso@mit.edu>	git	ext4	-	dev	no
+Jaegeuk Kim <jaegeuk@kernel.org>	git	f2fs	-	dev	no
+Eric Biggers <ebiggers@kernel.org>, Theodore Y. Ts'o <tytso@mit.edu>	git	fsverity	-	for-next	no
+Miklos Szeredi <miklos@szeredi.hu>	git	fuse	-	for-next	no
+Andreas Gruenbacher <agruenba@redhat.com>, Steven Whitehouse <swhiteho@redhat.com>	git	gfs2	-	for-next	no
+Dave Kleikamp <dave.kleikamp@oracle.com>	git	jfs	-	jfs-next	no
+Steve French <smfrench@gmail.com>	git	ksmbd	-	ksmbd-for-next	no
+Trond Myklebust <trondmy@gmail.com>	git	nfs	-	linux-next	no
+Anna Schumaker <anna@kernel.org>, Trond Myklebust <trondmy@gmail.com>, NFS Mailing List <linux-nfs@vger.kernel.org>	git	nfs-anna	-	linux-next	no
+Chuck Lever <chuck.lever@oracle.com>	git	nfsd	-	nfsd-next	no
+Namjae Jeon <linkinjeon@kernel.org>	git	ntfs	-	ntfs-next	no
+Konstantin Komarov <almaz.alexandrovich@paragon-software.com>	git	ntfs3	-	master	no
+Mike Marshall <hubcap@omnibond.com>	git	orangefs	-	for-next	no
+Miklos Szeredi <miklos@szeredi.hu>, Amir Goldstein <amir73il@gmail.com>	git	overlayfs	-	overlayfs-next	no
+Richard Weinberger <richard@nod.at>	git	ubifs	-	next	no
+Dominique Martinet <asmadeus@codewreck.org>	git	v9fs	-	9p-next	no
+Eric Van Hensbergen <ericvh@gmail.com>	git	v9fs-ericvh	-	ericvh/for-next	no
+David Chinner <david@fromorbit.com>, Carlos Maiolino <cem@kernel.org>, <linux-xfs@vger.kernel.org>	git	xfs	-	for-next	no
+Damien Le Moal <Damien.LeMoal@wdc.com>	git	zonefs	-	for-next	no
+Christian Brauner <brauner@kernel.org>	git	vfs-brauner	-	vfs.all	no
+Al Viro <viro@ZenIV.linux.org.uk>	git	vfs	-	for-next	yes
+-	switch	master
+Andrew Morton <akpm@linux-foundation.org>	git	mm-hotfixes	-	mm-hotfixes-unstable	no
+<>	git	fs-current	linux-next	-	no
+Nathan Chancellor <nathan@kernel.org>, Nicolas Schier <nsc@kernel.org>, KBuild Mailing List <linux-kbuild@vger.kernel.org>	git	kbuild-current	-	kbuild-fixes-for-next	no
+Nathan Chancellor <nathan@kernel.org>	git	clang-fixes	-	clang-fixes-for-next	no
+Vineet Gupta <vgupta@kernel.org>	git	arc-current	-	for-curr	no
+Russell King <linux@armlinux.org.uk>	git	arm-current	-	fixes	no
+Catalin Marinas <catalin.marinas@arm.com>, Will Deacon <will@kernel.org>	git	arm64-fixes	-	for-next/fixes	no
+Arnd Bergmann <arnd@arndb.de>, soc@lists.linux.dev	git	arm-soc-fixes	-	arm/fixes	no
+Bartosz Golaszewski <brgl@bgdev.pl>	git	davinci-current	-	davinci/for-current	no
+Krzysztof Kozlowski <krzk@kernel.org>	git	drivers-memory-fixes	-	fixes	no
+Chen Wang <unicorn_wang@outlook.com>, Inochi Amaoto <inochiama@outlook.com>	git	sophgo-fixes	-	fixes	no
+Chen Wang <unicorn_wang@outlook.com>, Inochi Amaoto <inochiama@outlook.com>	git	sophgo-soc-fixes	-	soc-fixes	no
+Geert Uytterhoeven <geert@linux-m68k.org>	git	m68k-current	-	for-linus	no
+Madhavan Srinivasan <maddy@linux.ibm.com>, Michael Ellerman <mpe@ellerman.id.au>, PowerPC <linuxppc-dev@lists.ozlabs.org>	git	powerpc-fixes	-	fixes	no
+Heiko Carstens <hca@linux.ibm.com>, Vasily Gorbik <gor@linux.ibm.com>, Christian Borntraeger <borntraeger@de.ibm.com>	git	s390-fixes	-	fixes	no
+David Miller <davem@davemloft.net>, Jakub Kicinski <kuba@kernel.org>, Paolo Abeni <pabeni@redhat.com>, Networking <netdev@vger.kernel.org>	git	net	-	main	no
+Daniel Borkmann <daniel@iogearbox.net>, Alexei Starovoitov <ast@kernel.org>, Andrii Nakryiko <andrii@kernel.org>, bpf <bpf@vger.kernel.org>, Networking <netdev@vger.kernel.org>	git	bpf	-	master	no
+Steffen Klassert <steffen.klassert@secunet.com>	git	ipsec	-	master	no
+Pablo Neira Ayuso <pablo@netfilter.org>, NetFilter <netfilter-devel@vger.kernel.org>	git	netfilter	-	main	no
+Simon Horman <horms@verge.net.au>	git	ipvs	-	main	no
+Johannes Berg <johannes@sipsolutions.net>, Wireless <linux-wireless@vger.kernel.org>	git	wireless	-	for-next	no
+Jeff Johnson <jjohnson@kernel.org>, Ath10k List <ath10k@lists.infradead.org>	git	ath	-	for-current	no
+Miriam Rachel Korenblit <miriam.rachel.korenblit@intel.com>, Johannes Berg <johannes@sipsolutions.net>	git	iwlwifi	-	fixes	no
+Miquel Raynal <miquel.raynal@bootlin.com>, Alexander Aring <alex.aring@gmail.com>, Stefan Schmidt <stefan@datenfreihafen.org>	git	wpan	-	master	no
+Jason Gunthorpe <jgg@nvidia.com>, Leon Romanovsky <leonro@nvidia.com>	git	rdma-fixes	-	for-rc	no
+Takashi Iwai <tiwai@suse.de>	git	sound-current	-	for-linus	no
+Mark Brown <broonie@kernel.org>, Liam Girdwood <lgirdwood@gmail.com>	git	sound-asoc-fixes	-	for-linus	no
+Mark Brown <broonie@kernel.org>	git	regmap-fixes	-	for-linus	no
+Mark Brown <broonie@kernel.org>, Liam Girdwood <lgirdwood@gmail.com>	git	regulator-fixes	-	for-linus	no
+Mark Brown <broonie@kernel.org>	git	spi-fixes	-	for-linus	no
+Manivannan Sadhasivam <mani@kernel.org>, Bjorn Helgaas <bhelgaas@google.com>, Lorenzo Pieralisi <lpieralisi@kernel.org>, Krzysztof Wilczyński <kwilczynski@kernel.org>	git	pci-current	-	for-linus	no
+Greg KH <greg@kroah.com>, Danilo Krummrich <dakr@kernel.org>, Rafael J. Wysocki <rafael@kernel.org>	git	driver-core.current	-	driver-core-linus	no
+Greg KH <greg@kroah.com>	git	tty.current	-	tty-linus	no
+Greg KH <greg@kroah.com>	git	usb.current	-	usb-linus	no
+Johan Hovold <johan@kernel.org>	git	usb-serial-fixes	-	usb-linus	no
+Kishon Vijay Abraham I <kishon@kernel.org>, Vinod Koul <vkoul@kernel.org>	git	phy	-	fixes	no
+Greg KH <greg@kroah.com>	git	staging.current	-	staging-linus	no
+Jonathan Cameron <jic23@kernel.org>	git	iio-fixes	-	fixes-togreg	no
+Guenter Roeck <linux@roeck-us.net>	git	watchdog-fixes	-	watchdog	no
+William Breathitt Gray <wbg@kernel.org>	git	counter-current	-	counter-current	no
+Greg KH <greg@kroah.com>, Arnd Bergmann <arnd@arndb.de>	git	char-misc.current	-	char-misc-linus	no
+Vinod Koul <vkoul@kernel.org>	git	soundwire-fixes	-	fixes	no
+Mika Westerberg <mika.westerberg@linux.intel.com>	git	thunderbolt-fixes	-	fixes	no
+Dmitry Torokhov <dmitry.torokhov@gmail.com>	git	input-current	-	for-linus	no
+Herbert Xu <herbert@gondor.apana.org.au>, Linux Crypto List <linux-crypto@vger.kernel.org>	git	crypto-current	-	master	no
+Eric Biggers <ebiggers@kernel.org>, Jason A. Donenfeld <Jason@zx2c4.com>, Ard Biesheuvel <ardb@kernel.org>, Linux Crypto List <linux-crypto@vger.kernel.org>	git	libcrypto-fixes	-	libcrypto-fixes	no
+Alex Williamson <alex@shazbot.org>	git	vfio-fixes	-	for-linus	no
+Shuah Khan <shuah@kernel.org>	git	kselftest-fixes	-	fixes	no
+Vinod Koul <vkoul@kernel.org>	git	dmaengine-fixes	-	fixes	no
+Lee Jones <lee@kernel.org>	git	backlight-fixes	-	for-backlight-fixes	no
+Boris Brezillon <boris.brezillon@collabora.com>	git	mtd-fixes	-	mtd/fixes	no
+Lee Jones <lee@kernel.org>	git	mfd-fixes	-	for-mfd-fixes	no
+Mauro Carvalho Chehab <mchehab@kernel.org>	git	v4l-dvb-fixes	-	fixes	no
+Philipp Zabel <p.zabel@pengutronix.de>	git	reset-fixes	-	reset/fixes	no
+Thomas Bogendoerfer <tsbogend@alpha.franken.de>	git	mips-fixes	-	mips-fixes	no
+Nicolas Ferre <nicolas.ferre@atmel.com>, Alexandre Belloni <alexandre.belloni@bootlin.com>, Ludovic Desroches <ludovic.desroches@microchip.com>	git	at91-fixes	-	at91-fixes	no
+Kevin Hilman <khilman@baylibre.com>	git	omap-fixes	-	fixes	no
+Paolo Bonzini <pbonzini@redhat.com>, KVM <kvm@vger.kernel.org>	git	kvm-fixes	-	master	no
+Christian Borntraeger <borntraeger@de.ibm.com>, Janosch Frank <frankja@linux.ibm.com>, KVM <kvm@vger.kernel.org>, S390 <linux-s390@vger.kernel.org>	git	kvms390-fixes	-	master	no
+Christoffer Dall <cdall@cs.columbia.edu>, Marc Zyngier <maz@kernel.org>	git	kvm-arm-fixes	-	fixes	no
+Guenter Roeck <linux@roeck-us.net>	git	hwmon-fixes	-	hwmon	no
+Dan Williams <dan.j.williams@intel.com>	git	nvdimm-fixes	-	libnvdimm-fixes	no
+Dan Williams <dan.j.williams@intel.com>, Dave Jiang <dave.jiang@intel.com>	git	cxl-fixes	-	fixes	no
+Marek Szyprowski <m.szyprowski@samsung.com>	git	dma-mapping-fixes	-	dma-mapping-fixes	no
+Hans de Goede <hansg@kernel.org>, Mark Gross <markgross@kernel.org>	git	drivers-x86-fixes	-	fixes	no
+Krzysztof Kozlowski <krzk@kernel.org>	git	samsung-krzk-fixes	-	fixes	no
+Krzysztof Kozlowski <krzk@kernel.org>, Sylwester Nawrocki <s.nawrocki@samsung.com>	git	pinctrl-samsung-fixes	-	fixes	no
+Rob Herring <robh@kernel.org>	git	devicetree-fixes	-	dt/linus	no
+Krzysztof Kozlowski <krzk@kernel.org>	git	dt-krzk-fixes	-	fixes	no
+Martin K. Petersen <martin.petersen@oracle.com>	git	scsi-fixes	-	fixes	no
+Dave Airlie <airlied@redhat.com>, DRI <dri-devel@lists.freedesktop.org>	git	drm-fixes	-	drm-fixes	no
+Simona Vetter <simona.vetter@ffwll.ch>, Jani Nikula <jani.nikula@linux.intel.com>, Joonas Lahtinen <joonas.lahtinen@linux.intel.com>, Rodrigo Vivi <rodrigo.vivi@intel.com>, Intel Graphics <intel-gfx@lists.freedesktop.org>, DRI <dri-devel@lists.freedesktop.org>	git	drm-intel-fixes	-	for-linux-next-fixes	no
+Ulf Hansson <ulf.hansson@linaro.org>	git	mmc-fixes	-	fixes	no
+Alexandre Belloni <alexandre.belloni@bootlin.com>	git	rtc-fixes	-	rtc-fixes	no
+Johan Hovold <johan@kernel.org>	git	gnss-fixes	-	gnss-linus	no
+Wei Liu <wei.liu@kernel.org>	git	hyperv-fixes	-	hyperv-fixes	no
+Palmer Dabbelt <palmer@dabbelt.com>, Paul Walmsley <paul.walmsley@sifive.com>	git	risc-v-fixes	-	fixes	no
+Conor Dooley <Conor.Dooley@microchip.com>	git	riscv-dt-fixes	-	riscv-dt-fixes	no
+Conor Dooley <Conor.Dooley@microchip.com>	git	riscv-soc-fixes	-	riscv-soc-fixes	no
+Moritz Fischer <mdf@kernel.org>, Xu Yilun <yilun.xu@intel.com>	git	fpga-fixes	-	fixes	no
+Greg KH <greg@kroah.com>	git	spdx	-	spdx-linus	no
+Bartosz Golaszewski <brgl@bgdev.pl>	git	gpio-brgl-fixes	-	gpio/for-current	no
+Andy Shevchenko <andriy.shevchenko@linux.intel.com>	git	gpio-intel-fixes	-	fixes	no
+Andy Shevchenko <andriy.shevchenko@linux.intel.com>	git	pinctrl-intel-fixes	-	fixes	no
+Andy Shevchenko <andriy.shevchenko@intel.com>	git	auxdisplay-fixes	-	fixes	no
+Shuah Khan <skhan@linuxfoundation.org>	git	kunit-fixes	-	kunit-fixes	no
+Mike Rapoport <rppt@kernel.org>	git	memblock-fixes	-	fixes	no
+Geert Uytterhoeven <geert@linux-m68k.org>	git	renesas-fixes	-	fixes	no
+Arnaldo Carvalho de Melo <arnaldo.melo@gmail.com>, Namhyung Kim <namhyung@kernel.org>	git	perf-current	-	perf-tools	no
+Ard Biesheuvel <ardb@kernel.org>	git	efi-fixes	-	urgent	no
+Sebastian Reichel <sre@kernel.org>	git	battery-fixes	-	fixes	no
+Jason Gunthorpe <jgg@nvidia.com>	git	iommufd-fixes	-	for-rc	no
+Miguel Ojeda <ojeda@kernel.org>	git	rust-fixes	-	rust-fixes	no
+Krzysztof Kozlowski <krzk@kernel.org>	git	w1-fixes	-	fixes	no
+Ulf Hansson <ulf.hansson@linaro.org>	git	pmdomain-fixes	-	fixes	no
+Andi Shyti <andi.shyti@kernel.org>	git	i2c-host-fixes	-	i2c/i2c-host-fixes	no
+Igor Korotin <igor.korotin@linux.dev>	git	i2c-rust-fixes	-	rust-i2c-fixes	no
+Andreas Larsson <andreas@gaisler.com>	git	sparc-fixes	-	for-linus	no
+Mike Turquette <mturquette@baylibre.com>, Stephen Boyd <sboyd@kernel.org>	git	clk-fixes	-	clk-fixes	no
+Drew Fustini <fustini@kernel.org>	git	thead-clk-fixes	-	thead-clk-fixes	no
+Drew Fustini <fustini@kernel.org>	git	tenstorrent-clk-fixes	-	tenstorrent-clk-fixes	no
+Drew Fustini <fustini@kernel.org>	git	fustini-config-fixes	-	riscv-config-fixes	no
+Bartosz Golaszewski <brgl@bgdev.pl>	git	pwrseq-fixes	-	pwrseq/for-current	no
+Drew Fustini <fustini@kernel.org>	git	thead-dt-fixes	-	thead-dt-fixes	no
+Steven Rostedt <rostedt@goodmis.org>, Masami Hiramatsu <mhiramat@kernel.org>	git	ftrace-fixes	-	ftrace/fixes	no
+Steven Rostedt <rostedt@goodmis.org>, Masami Hiramatsu <mhiramat@kernel.org>	git	ring-buffer-fixes	-	ring-buffer/fixes	no
+Steven Rostedt <rostedt@goodmis.org>, Masami Hiramatsu <mhiramat@kernel.org>	git	trace-fixes	-	trace/fixes	no
+Steven Rostedt <rostedt@goodmis.org>, Masami Hiramatsu <mhiramat@kernel.org>	git	tracefs-fixes	-	tracefs/fixes	no
+Yixun Lan <dlan@gentoo.org>	git	spacemit-fixes	-	fixes	no
+Thomas Gleixner <tglx@kernel.org>, Ingo Molnar <mingo@kernel.org>, H. Peter Anvin <hpa@zytor.com>, Peter Zijlstra <peterz@infradead.org>	git	tip-fixes	-	tip/urgent	no
+Vlastimil Babka <vbabka@suse.cz>	git	slab-fixes	-	slab/for-next-fixes	no
+Mike Rapoport <rppt@kernel.org>, Andrew Morton <akpm@linux-foundation.org>, Pasha Tatashin <pasha.tatashin@soleen.com>, Pratyush Yadav <pratyush@kernel.org>	git	kexec-fixes	-	kexec-fixes	no
+Mike Rapoport <rppt@kernel.org>, Andrew Morton <akpm@linux-foundation.org>, Pasha Tatashin <pasha.tatashin@soleen.com>, Pratyush Yadav <pratyush@kernel.org>	git	liveupdate-fixes	-	fixes	no
+Rob Clark <robdclark@gmail.com>, Sean Paul <seanpaul@chromium.org>	git	drm-msm-fixes	-	msm-fixes	no
+Richard Weinberger <richard@nod.at>	git	uml-fixes	-	fixes	no
+Jason Gunthorpe <jgg@nvidia.com>, Saeed Mahameed <saeedm@nvidia.com>, Dave Jiang <dave.jiang@intel.com>	git	fwctl-fixes	-	for-rc	no
+Dan Williams <dan.j.williams@intel.com>, <sathyanarayanan.kuppuswamy@linux.intel.com>, <yilun.xu@intel.com>, <sameo@rivosinc.com>, <aik@amd.com>, <suzuki.poulose@arm.com>, <steven.price@arm.com>, <lukas@wunner.de>	git	devsec-tsm-fixes	-	fixes	no
+Alice Ryhl <aliceryhl@google.com>, Danilo Krummrich <dakr@kernel.org>	git	drm-rust-fixes	-	for-linux-next-fixes	no
+Drew Fustini <fustini@kernel.org>, Joel Stanley <joel@jms.id.au>	git	tenstorrent-dt-fixes	-	tenstorrent-dt-fixes	no
+David Heidelberg <david@ixit.cz>	git	nfc-fixes	-	for-linus	no
+Simona Vetter <simona.vetter@ffwll.ch>, Intel Graphics <intel-gfx@lists.freedesktop.org>, DRI <dri-devel@lists.freedesktop.org>	git	drm-misc-fixes	-	for-linux-next-fixes	yes
+-	branch	pending-fixes
+Miguel Ojeda <ojeda@kernel.org>	git	rust	-	rust-next	no
+Joel Fernandes <joelagnelf@nvidia.com>, Alexandre Courbot <acourbot@nvidia.com>	git	rust-interop	-	interop-next	no
+Danilo Krummrich <dakr@kernel.org>	git	rust-alloc	-	alloc-next	no
+Danilo Krummrich <dakr@kernel.org>	git	rust-io	-	io-next	no
+Benno Lossin <lossin@kernel.org>	git	rust-pin-init	-	pin-init-next	no
+Andreas Hindborg <a.hindborg@kernel.org>	git	rust-timekeeping	-	timekeeping-next	no
+Andreas Hindborg <a.hindborg@kernel.org>	git	rust-xarray	-	xarray-next	no
+Tamir Duberstein <tamird@kernel.org>	git	rust-analyzer	-	rust-analyzer-next	no
+#Linus Torvalds <torvalds@linux-foundation.org>	git	linus	-	for-next	no
+Andrew Morton <akpm@linux-foundation.org>	git	mm-stable	-	mm-stable	no
+Andrew Morton <akpm@linux-foundation.org>	git	mm-nonmm-stable	-	mm-nonmm-stable	no
+Andrew Morton <akpm@linux-foundation.org>	git	mm-unstable	-	mm-unstable	no
+Andrew Morton <akpm@linux-foundation.org>	git	mm-nonmm-unstable	-	mm-nonmm-unstable	yes
+Nathan Chancellor <nathan@kernel.org>, Nicolas Schier <nsc@kernel.org>, KBuild Mailing List <linux-kbuild@vger.kernel.org>	git	kbuild	-	kbuild-for-next	no
+Miguel Ojeda <ojeda@kernel.org>	git	clang-format	-	clang-format	no
+Arnaldo Carvalho de Melo <arnaldo.melo@gmail.com>, Namhyung Kim <namhyung@kernel.org>	git	perf	-	perf-tools-next	no
+Miguel Ojeda <ojeda@kernel.org>	git	compiler-attributes	-	compiler-attributes	no
+Marek Szyprowski <m.szyprowski@samsung.com>	git	dma-mapping	-	dma-mapping-for-next	no
+Arnd Bergmann <arnd@arndb.de>	git	asm-generic	-	master	no
+Matt Turner <mattst88@gmail.com>	git	alpha	-	alpha-next	no
+Russell King <linux@armlinux.org.uk>	git	arm	-	for-next	no
+Catalin Marinas <catalin.marinas@arm.com>, Will Deacon <will@kernel.org>	git	arm64	-	for-next/core	no
+Will Deacon <will@kernel.org>	git	arm-perf	-	for-next/perf	no
+Arnd Bergmann <arnd@arndb.de>, soc@lists.linux.dev	git	arm-soc	-	for-next	no
+Kevin Hilman <khilman@baylibre.com>, Neil Armstrong <neil.armstrong@linaro.org>	git	amlogic	-	for-next	no
+Sven Peter <sven@kernel.org>, Janne Grunau <j@jannau.net>	git	asahi-soc	-	asahi-soc/for-next	no
+Nicolas Ferre <nicolas.ferre@atmel.com>, Alexandre Belloni <alexandre.belloni@bootlin.com>, Ludovic Desroches <ludovic.desroches@microchip.com>	git	at91	-	at91-next	no
+Andrew Jeffery <andrew@codeconstruct.com.au>, Joel Stanley <joel@jms.id.au>	git	bmc	-	for-next	no
+Florian Fainelli <f.fainelli@gmail.com>	git	broadcom	-	next	no
+Peter Chen <peter.chen@cixtech.com>	git	cix	-	for-next	no
+Bartosz Golaszewski <brgl@bgdev.pl>	git	davinci	-	davinci/for-next	no
+Krzysztof Kozlowski <krzk@kernel.org>	git	drivers-memory	-	for-next	no
+Christophe Leroy <chleroy@kernel.org>	git	fsl	-	soc_fsl	no
+Frank Li <Frank.li@nxp.com>	git	imx-mxs	-	for-next	no
+Matthias Brugger <matthias.bgg@gmail.com>, AngeloGioacchino Del Regno <angelogioacchino.delregno@kernel.org>	git	mediatek	-	for-next	no
+Jason Cooper <jason@lakedaemon.net>, Andrew Lunn <andrew@lunn.ch>, Gregory Clement <gregory.clement@bootlin.com>, ARM <linux-arm-kernel@lists.infradead.org>	git	mvebu	-	for-next	no
+Kevin Hilman <khilman@baylibre.com>	git	omap	-	for-next	no
+Konrad Dybcio <konradybcio@kernel.org>, Bjorn Andersson <andersson@kernel.org>, Andy Gross <agross@kernel.org>	git	qcom	-	for-next	no
+Geert Uytterhoeven <geert@linux-m68k.org>	git	renesas	-	next	no
+Philipp Zabel <p.zabel@pengutronix.de>	git	reset	-	reset/next	no
+Heiko Stuebner <heiko@sntech.de>	git	rockchip	-	for-next	no
+Krzysztof Kozlowski <krzk@kernel.org>	git	samsung-krzk	-	for-next	no
+Sudeep Holla <sudeep.holla@arm.com>	git	scmi	-	for-linux-next	no
+Chen Wang <unicorn_wang@outlook.com>, Inochi Amaoto <inochiama@outlook.com>	git	sophgo	-	for-next	no
+Chen Wang <unicorn_wang@outlook.com>, Inochi Amaoto <inochiama@outlook.com>	git	sophgo-soc	-	soc-for-next	no
+Yixun Lan <dlan@gentoo.org>	git	spacemit	-	for-next	no
+Alexandre Torgue <alexandre.torgue@st.com>	git	stm32	-	stm32-next	no
+Maxime Ripard <mripard@kernel.org>, Chen-Yu Tsai <wens@csie.org>	git	sunxi	-	sunxi/for-next	no
+Jens Wiklander <jens.wiklander@linaro.org>	git	tee	-	next	no
+Colin Cross <ccross@android.com>, Thierry Reding <treding@nvidia.com>	git	tegra	-	for-next	no
+Drew Fustini <fustini@kernel.org>, Joel Stanley <joel@jms.id.au>	git	tenstorrent-dt	-	tenstorrent-dt-for-next	no
+Drew Fustini <fustini@kernel.org>	git	fustini-config	-	riscv-config-for-next	no
+Drew Fustini <fustini@kernel.org>	git	thead-dt	-	thead-dt-for-next	no
+Nishanth Menon <nm@ti.com>, Tero Kristo <kristo@kernel.org>, Santosh Shilimkar <ssantosh@kernel.org>	git	ti	-	ti-next	no
+Michal Simek <monstr@monstr.eu>	git	xilinx	-	for-next	no
+Dinh Nguyen <dinguyen@kernel.org>	git	socfpga	-	for-next	no
+Mike Turquette <mturquette@baylibre.com>, Stephen Boyd <sboyd@kernel.org>	git	clk	-	clk-next	no
+Abel Vesa <abelvesa@kernel.org>	git	clk-imx	-	for-next	no
+Geert Uytterhoeven <geert@linux-m68k.org>	git	clk-renesas	-	renesas-clk	no
+Drew Fustini <fustini@kernel.org>	git	thead-clk	-	thead-clk-for-next	no
+Drew Fustini <fustini@kernel.org>	git	tenstorrent-clk	-	tenstorrent-clk-for-next	no
+Guo Ren <guoren@kernel.org>	git	csky	-	linux-next	no
+Huacai Chen <chenhuacai@loongson.cn>	git	loongarch	-	loongarch-next	no
+Geert Uytterhoeven <geert@linux-m68k.org>	git	m68k	-	for-next	no
+Greg Ungerer <gerg@linux-m68k.org>	git	m68knommu	-	for-next	no
+Michal Simek <monstr@monstr.eu>	git	microblaze	-	next	no
+Thomas Bogendoerfer <tsbogend@alpha.franken.de>	git	mips	-	mips-next	no
+Stafford Horne <shorne@gmail.com>	git	openrisc	-	for-next	no
+Helge Deller <deller@gmx.de>, Parisc List <linux-parisc@vger.kernel.org>	git	parisc-hd	-	for-next	no
+Madhavan Srinivasan <maddy@linux.ibm.com>, Michael Ellerman <mpe@ellerman.id.au>, PowerPC <linuxppc-dev@lists.ozlabs.org>	git	powerpc	-	next	no
+Palmer Dabbelt <palmer@dabbelt.com>, Paul Walmsley <paul@pwsan.com>	git	risc-v	-	for-next	no
+Conor Dooley <Conor.Dooley@microchip.com>	git	riscv-dt	-	riscv-dt-for-next	no
+Conor Dooley <Conor.Dooley@microchip.com>	git	riscv-soc	-	riscv-soc-for-next	no
+Heiko Carstens <hca@linux.ibm.com>, Vasily Gorbik <gor@linux.ibm.com>, Christian Borntraeger <borntraeger@de.ibm.com>	git	s390	-	for-next	no
+John Paul Adrian Glaubitz <glaubitz@physik.fu-berlin.de>	git	sh	-	for-next	no
+Andreas Larsson <andreas@gaisler.com>	git	sparc	-	for-next	no
+Richard Weinberger <richard@nod.at>	git	uml	-	next	no
+Max Filippov <jcmvbkbc@gmail.com>	git	xtensa	-	xtensa-for-next	no
+<>	git	fs-next	linux-next	-	no
+Petr Mladek <pmladek@suse.com>	git	printk	-	for-next	no
+Manivannan Sadhasivam <mani@kernel.org>, Bjorn Helgaas <bhelgaas@google.com>, Lorenzo Pieralisi <lpieralisi@kernel.org>, Krzysztof Wilczyński <kwilczynski@kernel.org>	git	pci	-	next	no
+Kees Cook <kees@kernel.org>	git	pstore	-	for-next/pstore	no
+Jiri Kosina <jikos@kernel.org>, Benjamin Tissoires <benjamin.tissoires@redhat.com>	git	hid	-	for-next	no
+Wolfram Sang <wsa@kernel.org>	git	i2c	-	i2c/for-next	no
+Andi Shyti <andi.shyti@kernel.org>	git	i2c-host	-	i2c/i2c-host	no
+Igor Korotin <igor.korotin@linux.dev	git	i2c-rust	-	rust-i2c-next	no
+Boris Brezillon <boris.brezillon@collabora.com>	git	i3c	-	i3c/next	no
+Jean Delvare <jdelvare@suse.de>	git	dmi	-	dmi-for-next	no
+Guenter Roeck <linux@roeck-us.net>	git	hwmon-staging	-	hwmon-next	no
+Jonathan Corbet <corbet@lwn.net>	git	jc_docs	-	docs-next	no
+Mauro Carvalho Chehab <mchehab@kernel.org>	git	v4l-dvb	-	next	no
+Mauro Carvalho Chehab <mchehab@kernel.org>	git	v4l-dvb-next	-	master	no
+Rafael J. Wysocki <rafael@kernel.org>	git	pm	-	linux-next	no
+Viresh Kumar <viresh.kumar@linaro.org>	git	cpufreq-arm	-	cpufreq/arm/linux-next	no
+Shuah Khan <shuah@kernel.org>	git	cpupower	-	cpupower	no
+Chanwoo Choi <cw00.choi@samsung.com>	git	devfreq	-	devfreq-next	no
+Ulf Hansson <ulf.hansson@linaro.org>	git	pmdomain	-	next	no
+Viresh Kumar <viresh.kumar@linaro.org>	git	opp	-	opp/linux-next	no
+Daniel Lezcano <daniel.lezcano@linaro.org>, Zhang Rui <rui.zhang@intel.com>	git	thermal	-	thermal/linux-next	no
+Jason Gunthorpe <jgg@nvidia.com>, Leon Romanovsky <leonro@nvidia.com>	git	rdma	-	for-next	no
+David Miller <davem@davemloft.net>, Jakub Kicinski <kuba@kernel.org>, Paolo Abeni <pabeni@redhat.com>, Networking <netdev@vger.kernel.org>	git	net-next	-	main	no
+Daniel Borkmann <daniel@iogearbox.net>, Alexei Starovoitov <ast@kernel.org>, Andrii Nakryiko <andrii@kernel.org>, bpf <bpf@vger.kernel.org>, Networking <netdev@vger.kernel.org>	git	bpf-next	-	for-next	no
+Steffen Klassert <steffen.klassert@secunet.com>	git	ipsec-next	-	master	no
+Leon Romanovsky <leon@kernel.org>	git	mlx5-next	-	mlx5-next	no
+Pablo Neira Ayuso <pablo@netfilter.org>, NetFilter <netfilter-devel@vger.kernel.org>	git	netfilter-next	-	main	no
+Simon Horman <horms@verge.net.au>	git	ipvs-next	-	main	no
+Marcel Holtmann <marcel@holtmann.org>, Johan Hedberg <johan.hedberg@gmail.com>	git	bluetooth	-	master	no
+Johannes Berg <johannes@sipsolutions.net>, Wireless <linux-wireless@vger.kernel.org>	git	wireless-next	-	for-next	no
+Jeff Johnson <jjohnson@kernel.org>, Ath10k List <ath10k@lists.infradead.org>	git	ath-next	-	for-next	no
+Miriam Rachel Korenblit <miriam.rachel.korenblit@intel.com>, Johannes Berg <johannes@sipsolutions.net>	git	iwlwifi-next	-	next	no
+Miquel Raynal <miquel.raynal@bootlin.com>, Alexander Aring <alex.aring@gmail.com>, Stefan Schmidt <stefan@datenfreihafen.org>	git	wpan-next	-	master	no
+Miquel Raynal <miquel.raynal@bootlin.com>, Alexander Aring <alex.aring@gmail.com>, Stefan Schmidt <stefan@datenfreihafen.org>	git	wpan-staging	-	staging	no
+Richard Weinberger <richard.weinberger@gmail.com>	git	mtd	-	mtd/next	no
+Miquel Raynal <miquel.raynal@bootlin.com>, Boris Brezillon <boris.brezillon@collabora.com>	git	nand	-	nand/next	no
+Tudor Ambarus <Tudor.Ambarus@microchip.com>, Vignesh Raghavendra <vigneshr@ti.com>	git	spi-nor	-	spi-nor/next	no
+Herbert Xu <herbert@gondor.apana.org.au>, Linux Crypto List <linux-crypto@vger.kernel.org>	git	crypto	-	master	no
+Eric Biggers <ebiggers@kernel.org>, Jason A. Donenfeld <Jason@zx2c4.com>, Ard Biesheuvel <ardb@kernel.org>, Linux Crypto List <linux-crypto@vger.kernel.org>	git	libcrypto	-	libcrypto-next	no
+Dave Airlie <airlied@redhat.com>, DRI <dri-devel@lists.freedesktop.org>	git	drm	-	drm-next	no
+Inki Dae <daeinki@gmail.com>	git	drm-exynos	-	for-linux-next	no
+Simona Vetter <simona.vetter@ffwll.ch>, Intel Graphics <intel-gfx@lists.freedesktop.org>, DRI <dri-devel@lists.freedesktop.org>	git	drm-misc	-	for-linux-next	no
+Alex Deucher <alexdeucher@gmail.com>	git	amdgpu	-	drm-next	no
+Simona Vetter <simona.vetter@ffwll.ch>, Jani Nikula <jani.nikula@linux.intel.com>, Joonas Lahtinen <joonas.lahtinen@linux.intel.com>, Rodrigo Vivi <rodrigo.vivi@intel.com>, Intel Graphics <intel-gfx@lists.freedesktop.org>, DRI <dri-devel@lists.freedesktop.org>	git	drm-intel	-	for-linux-next	no
+Rob Clark <robdclark@gmail.com>, Sean Paul <seanpaul@chromium.org>	git	drm-msm	-	msm-next	no
+Dmitry Baryshkov <lumag@kernel.org>	git	drm-msm-lumag	-	msm-next-lumag	no
+Thomas Hellström <thomas.hellstrom@linux.intel.com>, DRM XE List <intel-xe@lists.freedesktop.org>	git	drm-xe	-	drm-xe-next	no
+Alice Ryhl <aliceryhl@google.com>, Danilo Krummrich <dakr@kernel.org>	git	drm-rust	-	for-linux-next	no
+Danilo Krummrich <dakr@kernel.org>	git	drm-nova	-	nova-next	no
+Lucas Stach <l.stach@pengutronix.de>	git	etnaviv	-	etnaviv/next	no
+Helge Deller <deller@gmx.de>	git	fbdev	-	for-next	no
+Mark Brown <broonie@kernel.org>	git	regmap	-	for-next	no
+Takashi Iwai <tiwai@suse.de>	git	sound	-	for-next	no
+Takashi Sakamoto <o-takashi@sakamocchi.jp>	git	ieee1394	-	for-next	no
+Mark Brown <broonie@kernel.org>, Liam Girdwood <lgirdwood@gmail.com>	git	sound-asoc	-	for-next	no
+Luis Chamberlain <mcgrof@kernel.org>, Petr Pavlu <petr.pavlu@suse.com>, Sami Tolvanen <samitolvanen@google.com>, Daniel Gomez <da.gomez@samsung.com>	git	modules	-	modules-next	no
+Dmitry Torokhov <dmitry.torokhov@gmail.com>	git	input	-	next	no
+Jens Axboe <axboe@kernel.dk>	git	block	-	for-next	no
+Alasdair G Kergon <agk@redhat.com>, Mike Snitzer <snitzer@kernel.org>	git	device-mapper	-	for-next	no
+Damien Le Moal <damien.lemoal@opensource.wdc.com>	git	libata	-	for-next	no
+Dominik Brodowski <linux@dominikbrodowski.net>	git	pcmcia	-	pcmcia-next	no
+Ulf Hansson <ulf.hansson@linaro.org>	git	mmc	-	next	no
+Lee Jones <lee@kernel.org>	git	mfd	-	for-mfd-next	no
+Lee Jones <lee@kernel.org>	git	backlight	-	for-backlight-next	no
+Sebastian Reichel <sre@kernel.org>	git	battery	-	for-next	no
+Mark Brown <broonie@kernel.org>, Liam Girdwood <lgirdwood@gmail.com>	git	regulator	-	for-next	no
+Paul Moore <paul@paul-moore.com>	git	security	-	next	no
+John Johansen <john.johansen@canonical.com>	git	apparmor	-	apparmor-next	no
+Mimi Zohar <zohar@linux.vnet.ibm.com>, Dmitry Kasatkin <dmitry.kasatkin@gmail.com>	git	integrity	-	next-integrity	no
+Paul Moore <paul@paul-moore.com>	git	selinux	-	next	no
+Casey Schaufler <casey@schaufler-ca.com>	git	smack	-	next	no
+Tetsuo Handa <penguin-kernel@i-love.sakura.ne.jp>	git	tomoyo	-	master	no
+Jarkko Sakkinen <jarkko@kernel.org>	git	tpmdd-tpm	-	for-next-tpm	no
+Jarkko Sakkinen <jarkko@kernel.org>	git	tpmdd-keys	-	for-next-keys	no
+Guenter Roeck <linux@roeck-us.net>	git	watchdog	-	watchdog-next	no
+Joerg Roedel <joro@8bytes.org>	git	iommu	-	next	no
+Paul Moore <paul@paul-moore.com>	git	audit	-	next	no
+Rob Herring <robh@kernel.org>	git	devicetree	-	for-next	no
+Krzysztof Kozlowski <krzk@kernel.org>	git	dt-krzk	-	for-next	no
+Jassi Brar <jassisinghbrar@gmail.com>	git	mailbox	-	for-next	no
+Mark Brown <broonie@kernel.org>	git	spi	-	for-next	no
+Thomas Gleixner <tglx@kernel.org>, Ingo Molnar <mingo@kernel.org>, H. Peter Anvin <hpa@zytor.com>, Peter Zijlstra <peterz@infradead.org>	git	tip	-	master	no
+Mike Rapoport <rppt@kernel.org>, Andrew Morton <akpm@linux-foundation.org>, Pasha Tatashin <pasha.tatashin@soleen.com>, Pratyush Yadav <pratyush@kernel.org>	git	kexec	-	kexec-next	no
+Mike Rapoport <rppt@kernel.org>, Andrew Morton <akpm@linux-foundation.org>, Pasha Tatashin <pasha.tatashin@soleen.com>, Pratyush Yadav <pratyush@kernel.org>	git	liveupdate	-	next	no
+Daniel Lezcano <daniel.lezcano@linaro.org>	git	clockevents	-	timers/drivers/next	no
+Mauro Carvalho Chehab <mchehab+samsung@kernel.org>, Borislav Petkov <bp@alien8.de>, Tony Luck <tony.luck@intel.com>	git	edac	-	edac-for-next	no
+Steven Rostedt <rostedt@goodmis.org>, Masami Hiramatsu <mhiramat@kernel.org>	git	ftrace	-	for-next	no
+Paul E. McKenney <paulmck@kernel.org>, Frederic Weisbecker <frederic@kernel.org>, Neeraj Upadhyay <neeraj.upadhyay@kernel.org>, Boqun Feng <boqun.feng@gmail.com>, Uladzislau Rezki <urezki@gmail.com>	git	rcu	-	next	no
+Paul E. McKenney <paulmck@kernel.org>	git	paulmck	-	non-rcu/next	no
+Paolo Bonzini <pbonzini@redhat.com>, KVM <kvm@vger.kernel.org>	git	kvm	-	next	no
+Christoffer Dall <cdall@cs.columbia.edu>, Marc Zyngier <maz@kernel.org>	git	kvm-arm	-	next	no
+Christian Borntraeger <borntraeger@de.ibm.com>, Janosch Frank <frankja@linux.ibm.com>	git	kvms390	-	next	no
+Madhavan Srinivasan <maddy@linux.ibm.com>, PowerPC <linuxppc-dev@lists.ozlabs.org>	git	kvm-ppc	-	topic/ppc-kvm	no
+Anup Patel <anup@brainfault.org>	git	kvm-riscv	-	riscv_kvm_next	no
+Sean Christopherson <seanjc@google.com>	git	kvm-x86	-	next	no
+Juergen Gross <jgross@suse.com>, Konrad Rzeszutek Wilk <konrad.wilk@oracle.com>, Stefano Stabellini <sstabellini@kernel.org>, Boris Ostrovsky <boris.ostrovsky@oracle.com>, Xen Devel <xen-devel@lists.xenproject.org>	git	xen-tip	-	linux-next	no
+Dennis Zhou <dennis@kernel.org>, Tejun Heo <tj@kernel.org>, Christoph Lameter <cl@linux-foundation.org>, Ingo Molnar <mingo@kernel.org>	git	percpu	-	for-next	no
+Tejun Heo <tj@kernel.org>	git	workqueues	-	for-next	no
+Tejun Heo <tj@kernel.org>	git	sched-ext	-	for-next	no
+Hans de Goede <hansg@kernel.org>, Mark Gross <markgross@kernel.org>	git	drivers-x86	-	for-next	no
+Benson Leung <bleung@google.com>, Guenter Roeck <groeck@chromium.org>, Dmitry Torokhov <dmitry.torokhov@gmail.com>	git	chrome-platform	-	for-next	no
+Tzung-Bi Shih <tzungbi@kernel.org>, Chrome Platform <chrome-platform@lists.linux.dev>	git	chrome-platform-firmware	-	for-firmware-next	no
+Sebastian Reichel <sre@kernel.org>	git	hsi	-	for-next	no
+Lee Jones <lee@kernel.org>	git	leds-lj	-	for-leds-next	no
+Corey Minyard <corey@minyard.net>	git	ipmi	-	for-next	no
+Greg KH <greg@kroah.com>, Danilo Krummrich <dakr@kernel.org>, Rafael J. Wysocki <rafael@kernel.org>	git	driver-core	-	driver-core-next	no
+Greg KH <greg@kroah.com>	git	usb	-	usb-next	no
+Mika Westerberg <mika.westerberg@linux.intel.com>	git	thunderbolt	-	next	no
+Johan Hovold <johan@kernel.org>	git	usb-serial	-	usb-next	no
+Greg KH <greg@kroah.com>	git	tty	-	tty-next	no
+Greg KH <greg@kroah.com>, Arnd Bergmann <arnd@arndb.de>	git	char-misc	-	char-misc-next	no
+Mathieu Poirier <mathieu.poirier@linaro.org>	git	coresight	-	next	no
+Srini Kandagatla <srinivas.kandagatla@linaro.org>	git	fastrpc	-	for-next	no
+Moritz Fischer <mdf@kernel.org>, Xu Yilun <yilun.xu@intel.com>	git	fpga	-	for-next	no
+Georgi Djakov <djakov@kernel.org>	git	icc	-	icc-next	no
+Jonathan Cameron <jic23@kernel.org>	git	iio	-	togreg	no
+David Heidelberg <david@ixit.cz>	git	nfc	-	for-next	no
+Kishon Vijay Abraham I <kishon@kernel.org>, Vinod Koul <vkoul@kernel.org>	git	phy-next	-	next	no
+Vinod Koul <vkoul@kernel.org>	git	soundwire	-	next	no
+Chanwoo Choi <cw00.choi@samsung.com>	git	extcon	-	extcon-next	no
+Johan Hovold <johan@kernel.org>	git	gnss	-	gnss-next	no
+Alex Williamson <alex@shazbot.org>	git	vfio	-	next	no
+Krzysztof Kozlowski <krzk@kernel.org>	git	w1	-	for-next	no
+Stephen Boyd <sboyd@kernel.org>	git	spmi	-	spmi-next	no
+Greg KH <greg@kroah.com>	git	staging	-	staging-next	no
+William Breathitt Gray <wbg@kernel.org>	git	counter-next	-	counter-next	no
+Peter Rosin <peda@axentia.se>	git	mux	-	for-next	no
+Vinod Koul <vkoul@kernel.org>	git	dmaengine	-	next	no
+Tejun Heo <tj@kernel.org>	git	cgroup	-	for-next	no
+James Bottomley <James.Bottomley@HansenPartnership.com>	git	scsi	-	for-next	no
+Martin K. Petersen <martin.petersen@oracle.com>	git	scsi-mkp	-	for-next	no
+Michael S. Tsirkin <mst@redhat.com>	git	vhost	-	linux-next	no
+Bjorn Andersson <andersson@kernel.org>, Mathieu Poirier <mathieu.poirier@linaro.org>	git	rpmsg	-	for-next	no
+Bartosz Golaszewski <brgl@bgdev.pl>	git	gpio-brgl	-	gpio/for-next	no
+Andy Shevchenko <andriy.shevchenko@linux.intel.com>	git	gpio-intel	-	for-next	no
+Linus Walleij <linusw@kernel.org>	git	pinctrl	-	for-next	no
+Andy Shevchenko <andriy.shevchenko@linux.intel.com>	git	pinctrl-intel	-	for-next	no
+Geert Uytterhoeven <geert@linux-m68k.org>	git	pinctrl-renesas	-	renesas-pinctrl	no
+Krzysztof Kozlowski <krzk@kernel.org>, Sylwester Nawrocki <s.nawrocki@samsung.com>	git	pinctrl-samsung	-	for-next	no
+Uwe Kleine-König <ukleinek@kernel.org>	git	pwm	-	pwm/for-next	no
+Steven Rostedt <rostedt@goodmis.org>	git	ktest	-	for-next	no
+Shuah Khan <shuah@kernel.org>	git	kselftest	-	next	no
+Shuah Khan <skhan@linuxfoundation.org>	git	kunit	-	test	no
+Shuah Khan <skhan@linuxfoundation.org>	git	kunit-next	-	kunit	no
+Jiri Kosina <jikos@kernel.org>, Josh Poimboeuf <jpoimboe@kernel.org>, Miroslav Benes <mbenes@suse.cz>, Petr Mladek <pmladek@suse.com>, Joe Lawrence <joe.lawrence@redhat.com>	git	livepatching	-	for-next	no
+Alexandre Belloni <alexandre.belloni@bootlin.com>	git	rtc	-	rtc-next	no
+Dan Williams <dan.j.williams@intel.com>	git	nvdimm	-	libnvdimm-for-next	no
+Bartosz Golaszewski <brgl@bgdev.pl>	git	at24	-	at24/for-next	no
+Jon Mason <jdmason@kudzu.us>, NTB Mailing List <linux-ntb@googlegroups.com>	git	ntb	-	ntb-next	no
+Kees Cook <kees@kernel.org>	git	seccomp	-	for-next/seccomp	no
+Srinivas Kandagatla <srini@kernel.org>	git	slimbus	-	for-next	no
+Srinivas Kandagatla <srini@kernel.org>	git	nvmem	-	for-next	no
+Wei Liu <wei.liu@kernel.org>	git	hyperv	-	hyperv-next	no
+Andy Shevchenko <andriy.shevchenko@intel.com>	git	auxdisplay	-	for-next	no
+Daniel Thompson <daniel.thompson@linaro.org>	git	kgdb	-	kgdb/for-next	no
+Jason Gunthorpe <jgg@nvidia.com>	git	hmm	-	hmm	no
+Vignesh Raghavendra <vigneshr@ti.com>	git	cfi	-	cfi/next	no
+Manivannan Sadhasivam <manivannan.sadhasivam@linaro.org>	git	mhi	-	mhi-next	no
+Mike Rapoport <rppt@kernel.org>	git	memblock	-	for-next	no
+Dan Williams <dan.j.williams@intel.com>, Dave Jiang <dave.jiang@intel.com>	git	cxl	-	next	no
+Nick Terrell <terrelln@fb.com>	git	zstd	-	zstd-next	no
+Ard Biesheuvel <ardb@kernel.org>	git	efi	-	next	no
+Gabriel Krisman Bertazi <krisman@kernel.org>	git	unicode	-	for-next	no
+Vlastimil Babka <vbabka@suse.cz>	git	slab	-	slab/for-next	no
+Theodore Ts'o <tytso@mit.edu>, Jason A. Donenfeld <Jason@zx2c4.com>	git	random	-	master	no
+Mickaël Salaün <mic@digikod.net>	git	landlock	-	next	no
+Luis Chamberlain <mcgrof@kernel.org>, Kees Cook <kees@kernel.org>, Joel Granados <joel.granados@kernel.org>	git	sysctl	-	sysctl-next	no
+Kees Cook <kees@kernel.org>	git	execve	-	for-next/execve	no
+Yury Norov <yury.norov@gmail.com>	git	bitmap	-	bitmap-for-next	no
+Dipen Patel <dipenp@nvidia.com>	git	hte	-	for-next	no
+Kees Cook <kees@kernel.org>	git	kspp	-	for-next/kspp	no
+Shuah Khan <skhan@linuxfoundation.org>, Willy Tarreau <w@1wt.eu>, Thomas Weißschuh <thomas@t-8ch.de>, Paul E. McKenney <paulmck@kernel.org>	git	nolibc	-	for-next	no
+Jason Gunthorpe <jgg@nvidia.com>	git	iommufd	-	for-next	no
+Len Brown <lenb@kernel.org>	git	turbostat	-	next	no
+Bartosz Golaszewski <brgl@bgdev.pl>	git	pwrseq	-	pwrseq/for-next	no
+Serge Hallyn <sergeh@kernel.org>	git	capabilities-next	-	caps-next	no
+Fan Wu <wufan@kernel.org>	git	ipe	-	next	no
+Marco Elver <elver@google.com>	git	kcsan	-	next	no
+Eric Biggers <ebiggers@kernel.org>	git	crc	-	crc-next	no
+David Howells <dhowells@redhat.com>	git	keys-next	-	keys-next	no
+Jason Gunthorpe <jgg@nvidia.com>, Saeed Mahameed <saeedm@nvidia.com>, Dave Jiang <dave.jiang@intel.com>	git	fwctl	-	for-next	no
+Dan Williams <dan.j.williams@intel.com>, <sathyanarayanan.kuppuswamy@linux.intel.com>, <yilun.xu@intel.com>, <sameo@rivosinc.com>, <aik@amd.com>, <suzuki.poulose@arm.com>, <steven.price@arm.com>, <lukas@wunner.de>	git	devsec-tsm	-	next	no
+Wei Xu <xuwei5@hisilicon.com>	git	hisilicon	-	for-next	no
+Uwe Kleine-König <u.kleine-koenig@baylibre.com>	git	device-id	-	device-id-rework	yes
+Frederic Weisbecker <frederic@kernel.org>	git	kthread	-	for-next	yes

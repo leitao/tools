@@ -1,0 +1,36 @@
+# linux-next git plumbing -- hand-maintained, NOT generated.
+# Per-tree remotes live in trees.remotes (generated); .git/config
+# imports both via [include].
+# (migration dropped machine-specific sections: diff, gui, log, maintenance)
+
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logAllRefUpdates = false
+[protocol]
+	version = 2
+[url "https://git.kernel.org/pub/scm/linux/kernel/git/"]
+	insteadOf = korg:
+[url "https://git.kernel.org/pub/scm/fs/"]
+	insteadOf = korgfs:
+[url "https://github.com/"]
+	insteadof = gh:
+[url "https://gitlab.freedesktop.org/"]
+	insteadOf = gfo:
+[rerere]
+	enabled = true
+[gc]
+	rerereresolved = 180
+	auto = 0
+[merge "ours"]
+	name = \"always keep ours\" merge driver
+	driver = touch %A
+[format]
+	outputDirectory = ../patches
+[branch "fs-next"]
+	remote = korg
+	merge = refs/heads/fs-current
+[branch "stable"]
+	remote = origin
+	merge = refs/heads/master
