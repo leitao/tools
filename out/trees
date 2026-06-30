@@ -1,0 +1,2596 @@
+# linux-next tree definitions -- THE single source of truth.
+#
+# Generated from this file (never hand-edit the outputs):
+#   etc/control        -- the merge program do_merge/fetch_trees read
+#   etc/trees.remotes  -- the per-tree git [remote] stanzas (.git/config
+#                         imports it via [include], next to git-config.static)
+#
+# One stanza per operation, separated by a blank line, processed top to
+# bottom -- ORDER MATTERS (see O:). Lines starting with '#' are comments.
+# Every stanza begins with N:; field tags:
+#
+#   N:  Name        (required) git remote name; how the tree is reported.
+#   O:  Operation   (optional) absent => an ordinary tree to fetch and merge.
+#                   "switch [<base>]" => point the integration branch at N:,
+#                       creating it from <base> (builds fs-current/fs-next);
+#                       a bare "switch" returns to the mainline master.
+#                   "branch" => create/update a marker branch named N: here
+#                       (e.g. pending-fixes).
+#   U:  URL         (git trees) full git URL to fetch from; omitted for
+#                   internal trees (I: yes).
+#   B:  Branch      (git trees) remote branch at U: to fetch and merge.
+#   D:  builD       (git trees) yes|no -- build right after merging this tree.
+#   M:  Maintainer  (git trees) contact(s) emailed about problems; one or
+#                   more comma-separated "Name <email>".
+#   I:  Internal    (optional) "yes" => internal to linux-next (no remote;
+#                   assembled in-tree). Has no U:/B:.
+#   X:  eXcluded    (optional) "disabled" => keep the entry but skip it
+#                   (emitted as a commented-out line in etc/control).
+#
+# Ordinary trees use N:/U:/B:/D:/M: (+ optional I:, X:); switch/branch ops
+# use only N:/O:.
+
+N: origin
+U: https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git
+B: master
+D: yes
+M: Linus Torvalds <torvalds@linux-foundation.org>
+
+N: fs-current
+O: switch master
+
+N: ext4-fixes
+U: https://git.kernel.org/pub/scm/linux/kernel/git/tytso/ext4.git
+B: fixes
+D: no
+M: Theodore Ts'o <tytso@mit.edu>
+
+N: vfs-brauner-fixes
+U: https://git.kernel.org/pub/scm/linux/kernel/git/vfs/vfs.git
+B: vfs.fixes
+D: no
+M: Christian Brauner <brauner@kernel.org>
+
+N: fscrypt-current
+U: https://git.kernel.org/pub/scm/fs/fscrypt/linux.git
+B: for-current
+D: no
+M: Eric Biggers <ebiggers@kernel.org>, Theodore Ts'o <tytso@mit.edu>, Jaegeuk Kim <jaegeuk@kernel.org>
+
+N: fsverity-current
+U: https://git.kernel.org/pub/scm/fs/fsverity/linux.git
+B: for-current
+D: no
+M: Eric Biggers <ebiggers@kernel.org>, Theodore Ts'o <tytso@mit.edu>
+
+N: btrfs-fixes
+U: https://git.kernel.org/pub/scm/linux/kernel/git/kdave/linux.git
+B: next-fixes
+D: no
+M: David Sterba <dsterba@suse.cz>
+
+N: vfs-fixes
+U: https://git.kernel.org/pub/scm/linux/kernel/git/viro/vfs.git
+B: fixes
+D: no
+M: Al Viro <viro@ZenIV.linux.org.uk>
+
+N: erofs-fixes
+U: https://git.kernel.org/pub/scm/linux/kernel/git/xiang/erofs.git
+B: fixes
+D: no
+M: Gao Xiang <xiang@kernel.org>
+
+N: nfsd-fixes
+U: https://git.kernel.org/pub/scm/linux/kernel/git/cel/linux
+B: nfsd-fixes
+D: no
+M: Chuck Lever <chuck.lever@oracle.com>
+
+N: v9fs-fixes
+U: https://git.kernel.org/pub/scm/linux/kernel/git/ericvh/v9fs.git
+B: fixes/next
+D: no
+M: Eric Van Hensbergen <ericvh@gmail.com>
+
+N: overlayfs-fixes
+U: https://git.kernel.org/pub/scm/linux/kernel/git/overlayfs/vfs.git
+B: ovl-fixes
+D: yes
+M: Miklos Szeredi <miklos@szeredi.hu>, Amir Goldstein <amir73il@gmail.com>
+
+N: fs-next
+O: switch fs-current
+
+N: fscrypt
+U: https://git.kernel.org/pub/scm/fs/fscrypt/linux.git
+B: for-next
+D: no
+M: Eric Biggers <ebiggers@kernel.org>, Theodore Ts'o <tytso@mit.edu>, Jaegeuk Kim <jaegeuk@kernel.org>
+
+N: btrfs
+U: https://git.kernel.org/pub/scm/linux/kernel/git/kdave/linux.git
+B: for-next
+D: no
+M: David Sterba <dsterba@suse.cz>
+
+N: ceph
+U: https://github.com/ceph/ceph-client.git
+B: master
+D: no
+M: Jeff Layton <jlayton@kernel.org>, Ilya Dryomov <idryomov@gmail.com>
+
+N: cifs
+U: git://git.samba.org/sfrench/cifs-2.6.git
+B: for-next
+D: no
+M: Steve French <smfrench@gmail.com>, CIFS <linux-cifs@vger.kernel.org>
+
+N: configfs
+U: https://git.kernel.org/pub/scm/linux/kernel/git/a.hindborg/linux.git
+B: configfs-next
+D: no
+M: Andreas Hindborg <a.hindborg@kernel.org>
+
+N: ecryptfs
+U: https://git.kernel.org/pub/scm/linux/kernel/git/tyhicks/ecryptfs.git
+B: next
+D: no
+M: Tyler Hicks <code@tyhicks.com>
+
+N: dlm
+U: https://git.kernel.org/pub/scm/linux/kernel/git/teigland/linux-dlm.git
+B: next
+D: no
+M: David Teigland <teigland@redhat.com>
+
+N: erofs
+U: https://git.kernel.org/pub/scm/linux/kernel/git/xiang/erofs.git
+B: dev
+D: no
+M: Gao Xiang <xiang@kernel.org>
+
+N: exfat
+U: https://git.kernel.org/pub/scm/linux/kernel/git/linkinjeon/exfat.git
+B: dev
+D: no
+M: Namjae Jeon <linkinjeon@kernel.org>
+
+N: ext3
+U: https://git.kernel.org/pub/scm/linux/kernel/git/jack/linux-fs.git
+B: for_next
+D: no
+M: Jan Kara <jack@suse.cz>
+
+N: ext4
+U: https://git.kernel.org/pub/scm/linux/kernel/git/tytso/ext4.git
+B: dev
+D: no
+M: Theodore Ts'o <tytso@mit.edu>
+
+N: f2fs
+U: https://git.kernel.org/pub/scm/linux/kernel/git/jaegeuk/f2fs.git
+B: dev
+D: no
+M: Jaegeuk Kim <jaegeuk@kernel.org>
+
+N: fsverity
+U: https://git.kernel.org/pub/scm/fs/fsverity/linux.git
+B: for-next
+D: no
+M: Eric Biggers <ebiggers@kernel.org>, Theodore Y. Ts'o <tytso@mit.edu>
+
+N: fuse
+U: https://git.kernel.org/pub/scm/linux/kernel/git/mszeredi/fuse.git
+B: for-next
+D: no
+M: Miklos Szeredi <miklos@szeredi.hu>
+
+N: gfs2
+U: https://git.kernel.org/pub/scm/linux/kernel/git/gfs2/linux-gfs2.git
+B: for-next
+D: no
+M: Andreas Gruenbacher <agruenba@redhat.com>, Steven Whitehouse <swhiteho@redhat.com>
+
+N: jfs
+U: https://github.com/kleikamp/linux-shaggy.git
+B: jfs-next
+D: no
+M: Dave Kleikamp <dave.kleikamp@oracle.com>
+
+N: ksmbd
+U: https://github.com/smfrench/smb3-kernel.git
+B: ksmbd-for-next
+D: no
+M: Steve French <smfrench@gmail.com>
+
+N: nfs
+U: git://git.linux-nfs.org/projects/trondmy/nfs-2.6.git
+B: linux-next
+D: no
+M: Trond Myklebust <trondmy@gmail.com>
+
+N: nfs-anna
+U: git://git.linux-nfs.org/projects/anna/linux-nfs.git
+B: linux-next
+D: no
+M: Anna Schumaker <anna@kernel.org>, Trond Myklebust <trondmy@gmail.com>, NFS Mailing List <linux-nfs@vger.kernel.org>
+
+N: nfsd
+U: https://git.kernel.org/pub/scm/linux/kernel/git/cel/linux
+B: nfsd-next
+D: no
+M: Chuck Lever <chuck.lever@oracle.com>
+
+N: ntfs
+U: https://git.kernel.org/pub/scm/linux/kernel/git/linkinjeon/ntfs.git
+B: ntfs-next
+D: no
+M: Namjae Jeon <linkinjeon@kernel.org>
+
+N: ntfs3
+U: https://github.com/Paragon-Software-Group/linux-ntfs3.git
+B: master
+D: no
+M: Konstantin Komarov <almaz.alexandrovich@paragon-software.com>
+
+N: orangefs
+U: https://git.kernel.org/pub/scm/linux/kernel/git/hubcap/linux.git
+B: for-next
+D: no
+M: Mike Marshall <hubcap@omnibond.com>
+
+N: overlayfs
+U: https://git.kernel.org/pub/scm/linux/kernel/git/overlayfs/vfs.git
+B: overlayfs-next
+D: no
+M: Miklos Szeredi <miklos@szeredi.hu>, Amir Goldstein <amir73il@gmail.com>
+
+N: ubifs
+U: https://git.kernel.org/pub/scm/linux/kernel/git/rw/ubifs.git
+B: next
+D: no
+M: Richard Weinberger <richard@nod.at>
+
+N: v9fs
+U: https://github.com/martinetd/linux
+B: 9p-next
+D: no
+M: Dominique Martinet <asmadeus@codewreck.org>
+
+N: v9fs-ericvh
+U: https://git.kernel.org/pub/scm/linux/kernel/git/ericvh/v9fs.git
+B: ericvh/for-next
+D: no
+M: Eric Van Hensbergen <ericvh@gmail.com>
+
+N: xfs
+U: https://git.kernel.org/pub/scm/fs/xfs/xfs-linux.git
+B: for-next
+D: no
+M: David Chinner <david@fromorbit.com>, Carlos Maiolino <cem@kernel.org>, <linux-xfs@vger.kernel.org>
+
+N: zonefs
+U: https://git.kernel.org/pub/scm/linux/kernel/git/dlemoal/zonefs.git
+B: for-next
+D: no
+M: Damien Le Moal <Damien.LeMoal@wdc.com>
+
+N: vfs-brauner
+U: https://git.kernel.org/pub/scm/linux/kernel/git/vfs/vfs.git
+B: vfs.all
+D: no
+M: Christian Brauner <brauner@kernel.org>
+
+N: vfs
+U: https://git.kernel.org/pub/scm/linux/kernel/git/viro/vfs.git
+B: for-next
+D: yes
+M: Al Viro <viro@ZenIV.linux.org.uk>
+
+N: master
+O: switch
+
+N: mm-hotfixes
+U: https://git.kernel.org/pub/scm/linux/kernel/git/akpm/mm
+B: mm-hotfixes-unstable
+D: no
+M: Andrew Morton <akpm@linux-foundation.org>
+
+N: fs-current
+I: yes
+B: -
+D: no
+M: <>
+
+N: kbuild-current
+U: https://git.kernel.org/pub/scm/linux/kernel/git/kbuild/linux.git
+B: kbuild-fixes-for-next
+D: no
+M: Nathan Chancellor <nathan@kernel.org>, Nicolas Schier <nsc@kernel.org>, KBuild Mailing List <linux-kbuild@vger.kernel.org>
+
+N: clang-fixes
+U: https://git.kernel.org/pub/scm/linux/kernel/git/nathan/linux.git
+B: clang-fixes-for-next
+D: no
+M: Nathan Chancellor <nathan@kernel.org>
+
+N: arc-current
+U: https://git.kernel.org/pub/scm/linux/kernel/git/vgupta/arc.git
+B: for-curr
+D: no
+M: Vineet Gupta <vgupta@kernel.org>
+
+N: arm-current
+U: https://git.kernel.org/pub/scm/linux/kernel/git/rmk/linux.git
+B: fixes
+D: no
+M: Russell King <linux@armlinux.org.uk>
+
+N: arm64-fixes
+U: https://git.kernel.org/pub/scm/linux/kernel/git/arm64/linux
+B: for-next/fixes
+D: no
+M: Catalin Marinas <catalin.marinas@arm.com>, Will Deacon <will@kernel.org>
+
+N: arm-soc-fixes
+U: https://git.kernel.org/pub/scm/linux/kernel/git/soc/soc.git
+B: arm/fixes
+D: no
+M: Arnd Bergmann <arnd@arndb.de>, soc@lists.linux.dev 
+
+N: davinci-current
+U: https://git.kernel.org/pub/scm/linux/kernel/git/brgl/linux.git
+B: davinci/for-current
+D: no
+M: Bartosz Golaszewski <brgl@bgdev.pl>
+
+N: drivers-memory-fixes
+U: https://git.kernel.org/pub/scm/linux/kernel/git/krzk/linux-mem-ctrl.git
+B: fixes
+D: no
+M: Krzysztof Kozlowski <krzk@kernel.org>
+
+N: sophgo-fixes
+U: https://github.com/sophgo/linux.git
+B: fixes
+D: no
+M: Chen Wang <unicorn_wang@outlook.com>, Inochi Amaoto <inochiama@outlook.com>
+
+N: sophgo-soc-fixes
+U: https://github.com/sophgo/linux.git
+B: soc-fixes
+D: no
+M: Chen Wang <unicorn_wang@outlook.com>, Inochi Amaoto <inochiama@outlook.com>
+
+N: m68k-current
+U: https://git.kernel.org/pub/scm/linux/kernel/git/geert/linux-m68k.git
+B: for-linus
+D: no
+M: Geert Uytterhoeven <geert@linux-m68k.org>
+
+N: powerpc-fixes
+U: https://git.kernel.org/pub/scm/linux/kernel/git/powerpc/linux.git
+B: fixes
+D: no
+M: Madhavan Srinivasan <maddy@linux.ibm.com>, Michael Ellerman <mpe@ellerman.id.au>, PowerPC <linuxppc-dev@lists.ozlabs.org>
+
+N: s390-fixes
+U: https://git.kernel.org/pub/scm/linux/kernel/git/s390/linux.git
+B: fixes
+D: no
+M: Heiko Carstens <hca@linux.ibm.com>, Vasily Gorbik <gor@linux.ibm.com>, Christian Borntraeger <borntraeger@de.ibm.com>
+
+N: net
+U: https://git.kernel.org/pub/scm/linux/kernel/git/netdev/net.git
+B: main
+D: no
+M: David Miller <davem@davemloft.net>, Jakub Kicinski <kuba@kernel.org>, Paolo Abeni <pabeni@redhat.com>, Networking <netdev@vger.kernel.org>
+
+N: bpf
+U: https://git.kernel.org/pub/scm/linux/kernel/git/bpf/bpf.git/
+B: master
+D: no
+M: Daniel Borkmann <daniel@iogearbox.net>, Alexei Starovoitov <ast@kernel.org>, Andrii Nakryiko <andrii@kernel.org>, bpf <bpf@vger.kernel.org>, Networking <netdev@vger.kernel.org>
+
+N: ipsec
+U: https://git.kernel.org/pub/scm/linux/kernel/git/klassert/ipsec.git
+B: master
+D: no
+M: Steffen Klassert <steffen.klassert@secunet.com>
+
+N: netfilter
+U: https://git.kernel.org/pub/scm/linux/kernel/git/netfilter/nf.git
+B: main
+D: no
+M: Pablo Neira Ayuso <pablo@netfilter.org>, NetFilter <netfilter-devel@vger.kernel.org>
+
+N: ipvs
+U: https://git.kernel.org/pub/scm/linux/kernel/git/horms/ipvs.git
+B: main
+D: no
+M: Simon Horman <horms@verge.net.au>
+
+N: wireless
+U: https://git.kernel.org/pub/scm/linux/kernel/git/wireless/wireless.git
+B: for-next
+D: no
+M: Johannes Berg <johannes@sipsolutions.net>, Wireless <linux-wireless@vger.kernel.org>
+
+N: ath
+U: https://git.kernel.org/pub/scm/linux/kernel/git/ath/ath.git
+B: for-current
+D: no
+M: Jeff Johnson <jjohnson@kernel.org>, Ath10k List <ath10k@lists.infradead.org>
+
+N: iwlwifi
+U: https://git.kernel.org/pub/scm/linux/kernel/git/iwlwifi/iwlwifi-next.git
+B: fixes
+D: no
+M: Miriam Rachel Korenblit <miriam.rachel.korenblit@intel.com>, Johannes Berg <johannes@sipsolutions.net>
+
+N: wpan
+U: https://git.kernel.org/pub/scm/linux/kernel/git/wpan/wpan.git
+B: master
+D: no
+M: Miquel Raynal <miquel.raynal@bootlin.com>, Alexander Aring <alex.aring@gmail.com>, Stefan Schmidt <stefan@datenfreihafen.org>
+
+N: rdma-fixes
+U: https://git.kernel.org/pub/scm/linux/kernel/git/rdma/rdma.git
+B: for-rc
+D: no
+M: Jason Gunthorpe <jgg@nvidia.com>, Leon Romanovsky <leonro@nvidia.com>
+
+N: sound-current
+U: https://git.kernel.org/pub/scm/linux/kernel/git/tiwai/sound.git
+B: for-linus
+D: no
+M: Takashi Iwai <tiwai@suse.de>
+
+N: sound-asoc-fixes
+U: https://git.kernel.org/pub/scm/linux/kernel/git/broonie/sound.git
+B: for-linus
+D: no
+M: Mark Brown <broonie@kernel.org>, Liam Girdwood <lgirdwood@gmail.com>
+
+N: regmap-fixes
+U: https://git.kernel.org/pub/scm/linux/kernel/git/broonie/regmap.git
+B: for-linus
+D: no
+M: Mark Brown <broonie@kernel.org>
+
+N: regulator-fixes
+U: https://git.kernel.org/pub/scm/linux/kernel/git/broonie/regulator.git
+B: for-linus
+D: no
+M: Mark Brown <broonie@kernel.org>, Liam Girdwood <lgirdwood@gmail.com>
+
+N: spi-fixes
+U: https://git.kernel.org/pub/scm/linux/kernel/git/broonie/spi.git
+B: for-linus
+D: no
+M: Mark Brown <broonie@kernel.org>
+
+N: pci-current
+U: https://git.kernel.org/pub/scm/linux/kernel/git/pci/pci.git
+B: for-linus
+D: no
+M: Manivannan Sadhasivam <mani@kernel.org>, Bjorn Helgaas <bhelgaas@google.com>, Lorenzo Pieralisi <lpieralisi@kernel.org>, Krzysztof Wilczyński <kwilczynski@kernel.org>
+
+N: driver-core.current
+U: https://git.kernel.org/pub/scm/linux/kernel/git/driver-core/driver-core.git
+B: driver-core-linus
+D: no
+M: Greg KH <greg@kroah.com>, Danilo Krummrich <dakr@kernel.org>, Rafael J. Wysocki <rafael@kernel.org>
+
+N: tty.current
+U: https://git.kernel.org/pub/scm/linux/kernel/git/gregkh/tty.git
+B: tty-linus
+D: no
+M: Greg KH <greg@kroah.com>
+
+N: usb.current
+U: https://git.kernel.org/pub/scm/linux/kernel/git/gregkh/usb.git
+B: usb-linus
+D: no
+M: Greg KH <greg@kroah.com>
+
+N: usb-serial-fixes
+U: https://git.kernel.org/pub/scm/linux/kernel/git/johan/usb-serial.git
+B: usb-linus
+D: no
+M: Johan Hovold <johan@kernel.org>
+
+N: phy
+U: https://git.kernel.org/pub/scm/linux/kernel/git/phy/linux-phy.git
+B: fixes
+D: no
+M: Kishon Vijay Abraham I <kishon@kernel.org>, Vinod Koul <vkoul@kernel.org>
+
+N: staging.current
+U: https://git.kernel.org/pub/scm/linux/kernel/git/gregkh/staging.git
+B: staging-linus
+D: no
+M: Greg KH <greg@kroah.com>
+
+N: iio-fixes
+U: https://git.kernel.org/pub/scm/linux/kernel/git/jic23/iio.git
+B: fixes-togreg
+D: no
+M: Jonathan Cameron <jic23@kernel.org>
+
+N: watchdog-fixes
+B: watchdog
+D: no
+M: Guenter Roeck <linux@roeck-us.net>
+
+N: counter-current
+U: https://git.kernel.org/pub/scm/linux/kernel/git/wbg/counter.git
+B: counter-current
+D: no
+M: William Breathitt Gray <wbg@kernel.org>
+
+N: char-misc.current
+U: https://git.kernel.org/pub/scm/linux/kernel/git/gregkh/char-misc.git
+B: char-misc-linus
+D: no
+M: Greg KH <greg@kroah.com>, Arnd Bergmann <arnd@arndb.de>
+
+N: soundwire-fixes
+U: https://git.kernel.org/pub/scm/linux/kernel/git/vkoul/soundwire.git
+B: fixes
+D: no
+M: Vinod Koul <vkoul@kernel.org>
+
+N: thunderbolt-fixes
+U: https://git.kernel.org/pub/scm/linux/kernel/git/westeri/thunderbolt.git
+B: fixes
+D: no
+M: Mika Westerberg <mika.westerberg@linux.intel.com>
+
+N: input-current
+U: https://git.kernel.org/pub/scm/linux/kernel/git/dtor/input.git
+B: for-linus
+D: no
+M: Dmitry Torokhov <dmitry.torokhov@gmail.com>
+
+N: crypto-current
+U: https://git.kernel.org/pub/scm/linux/kernel/git/herbert/crypto-2.6.git
+B: master
+D: no
+M: Herbert Xu <herbert@gondor.apana.org.au>, Linux Crypto List <linux-crypto@vger.kernel.org>
+
+N: libcrypto-fixes
+U: https://git.kernel.org/pub/scm/linux/kernel/git/ebiggers/linux.git
+B: libcrypto-fixes
+D: no
+M: Eric Biggers <ebiggers@kernel.org>, Jason A. Donenfeld <Jason@zx2c4.com>, Ard Biesheuvel <ardb@kernel.org>, Linux Crypto List <linux-crypto@vger.kernel.org>
+
+N: vfio-fixes
+U: https://github.com/awilliam/linux-vfio.git
+B: for-linus
+D: no
+M: Alex Williamson <alex@shazbot.org>
+
+N: kselftest-fixes
+U: https://git.kernel.org/pub/scm/linux/kernel/git/shuah/linux-kselftest.git
+B: fixes
+D: no
+M: Shuah Khan <shuah@kernel.org>
+
+N: dmaengine-fixes
+U: https://git.kernel.org/pub/scm/linux/kernel/git/vkoul/dmaengine.git
+B: fixes
+D: no
+M: Vinod Koul <vkoul@kernel.org>
+
+N: backlight-fixes
+U: https://git.kernel.org/pub/scm/linux/kernel/git/lee/backlight.git
+B: for-backlight-fixes
+D: no
+M: Lee Jones <lee@kernel.org>
+
+N: mtd-fixes
+U: https://git.kernel.org/pub/scm/linux/kernel/git/mtd/linux.git
+B: mtd/fixes
+D: no
+M: Boris Brezillon <boris.brezillon@collabora.com>
+
+N: mfd-fixes
+U: https://git.kernel.org/pub/scm/linux/kernel/git/lee/mfd.git
+B: for-mfd-fixes
+D: no
+M: Lee Jones <lee@kernel.org>
+
+N: v4l-dvb-fixes
+U: git://linuxtv.org/media-ci/media-pending.git
+B: fixes
+D: no
+M: Mauro Carvalho Chehab <mchehab@kernel.org>
+
+N: reset-fixes
+U: https://git.pengutronix.de/git/pza/linux
+B: reset/fixes
+D: no
+M: Philipp Zabel <p.zabel@pengutronix.de>
+
+N: mips-fixes
+U: https://git.kernel.org/pub/scm/linux/kernel/git/mips/linux.git
+B: mips-fixes
+D: no
+M: Thomas Bogendoerfer <tsbogend@alpha.franken.de>
+
+N: at91-fixes
+U: https://git.kernel.org/pub/scm/linux/kernel/git/at91/linux.git
+B: at91-fixes
+D: no
+M: Nicolas Ferre <nicolas.ferre@atmel.com>, Alexandre Belloni <alexandre.belloni@bootlin.com>, Ludovic Desroches <ludovic.desroches@microchip.com>
+
+N: omap-fixes
+U: https://git.kernel.org/pub/scm/linux/kernel/git/khilman/linux-omap.git
+B: fixes
+D: no
+M: Kevin Hilman <khilman@baylibre.com>
+
+N: kvm-fixes
+U: git://git.kernel.org/pub/scm/virt/kvm/kvm.git
+B: master
+D: no
+M: Paolo Bonzini <pbonzini@redhat.com>, KVM <kvm@vger.kernel.org>
+
+N: kvms390-fixes
+U: https://git.kernel.org/pub/scm/linux/kernel/git/kvms390/linux.git
+B: master
+D: no
+M: Christian Borntraeger <borntraeger@de.ibm.com>, Janosch Frank <frankja@linux.ibm.com>, KVM <kvm@vger.kernel.org>, S390 <linux-s390@vger.kernel.org>
+
+N: kvm-arm-fixes
+U: https://git.kernel.org/pub/scm/linux/kernel/git/kvmarm/kvmarm.git
+B: fixes
+D: no
+M: Christoffer Dall <cdall@cs.columbia.edu>, Marc Zyngier <maz@kernel.org>
+
+N: hwmon-fixes
+U: https://git.kernel.org/pub/scm/linux/kernel/git/groeck/linux-staging.git
+B: hwmon
+D: no
+M: Guenter Roeck <linux@roeck-us.net>
+
+N: nvdimm-fixes
+U: https://git.kernel.org/pub/scm/linux/kernel/git/nvdimm/nvdimm.git
+B: libnvdimm-fixes
+D: no
+M: Dan Williams <dan.j.williams@intel.com>
+
+N: cxl-fixes
+U: https://git.kernel.org/pub/scm/linux/kernel/git/cxl/cxl.git
+B: fixes
+D: no
+M: Dan Williams <dan.j.williams@intel.com>, Dave Jiang <dave.jiang@intel.com>
+
+N: dma-mapping-fixes
+U: https://git.kernel.org/pub/scm/linux/kernel/git/mszyprowski/linux.git
+B: dma-mapping-fixes
+D: no
+M: Marek Szyprowski <m.szyprowski@samsung.com>
+
+N: drivers-x86-fixes
+U: https://git.kernel.org/pub/scm/linux/kernel/git/pdx86/platform-drivers-x86.git
+B: fixes
+D: no
+M: Hans de Goede <hansg@kernel.org>, Mark Gross <markgross@kernel.org>
+
+N: samsung-krzk-fixes
+U: https://git.kernel.org/pub/scm/linux/kernel/git/krzk/linux.git
+B: fixes
+D: no
+M: Krzysztof Kozlowski <krzk@kernel.org>
+
+N: pinctrl-samsung-fixes
+U: https://git.kernel.org/pub/scm/linux/kernel/git/pinctrl/samsung.git
+B: fixes
+D: no
+M: Krzysztof Kozlowski <krzk@kernel.org>, Sylwester Nawrocki <s.nawrocki@samsung.com>
+
+N: devicetree-fixes
+U: https://git.kernel.org/pub/scm/linux/kernel/git/robh/linux.git
+B: dt/linus
+D: no
+M: Rob Herring <robh@kernel.org>
+
+N: dt-krzk-fixes
+U: https://git.kernel.org/pub/scm/linux/kernel/git/krzk/linux-dt.git
+B: fixes
+D: no
+M: Krzysztof Kozlowski <krzk@kernel.org>
+
+N: scsi-fixes
+U: https://git.kernel.org/pub/scm/linux/kernel/git/mkp/scsi.git
+B: fixes
+D: no
+M: Martin K. Petersen <martin.petersen@oracle.com>
+
+N: drm-fixes
+U: https://gitlab.freedesktop.org/drm/kernel.git
+B: drm-fixes
+D: no
+M: Dave Airlie <airlied@redhat.com>, DRI <dri-devel@lists.freedesktop.org>
+
+N: drm-intel-fixes
+U: https://gitlab.freedesktop.org/drm/i915/kernel.git
+B: for-linux-next-fixes
+D: no
+M: Simona Vetter <simona.vetter@ffwll.ch>, Jani Nikula <jani.nikula@linux.intel.com>, Joonas Lahtinen <joonas.lahtinen@linux.intel.com>, Rodrigo Vivi <rodrigo.vivi@intel.com>, Intel Graphics <intel-gfx@lists.freedesktop.org>, DRI <dri-devel@lists.freedesktop.org>
+
+N: mmc-fixes
+U: https://git.kernel.org/pub/scm/linux/kernel/git/ulfh/mmc.git
+B: fixes
+D: no
+M: Ulf Hansson <ulf.hansson@linaro.org>
+
+N: rtc-fixes
+U: https://git.kernel.org/pub/scm/linux/kernel/git/abelloni/linux.git
+B: rtc-fixes
+D: no
+M: Alexandre Belloni <alexandre.belloni@bootlin.com>
+
+N: gnss-fixes
+U: https://git.kernel.org/pub/scm/linux/kernel/git/johan/gnss.git
+B: gnss-linus
+D: no
+M: Johan Hovold <johan@kernel.org>
+
+N: hyperv-fixes
+U: https://git.kernel.org/pub/scm/linux/kernel/git/hyperv/linux.git
+B: hyperv-fixes
+D: no
+M: Wei Liu <wei.liu@kernel.org>
+
+N: risc-v-fixes
+U: https://git.kernel.org/pub/scm/linux/kernel/git/riscv/linux.git
+B: fixes
+D: no
+M: Palmer Dabbelt <palmer@dabbelt.com>, Paul Walmsley <paul.walmsley@sifive.com>
+
+N: riscv-dt-fixes
+U: https://git.kernel.org/pub/scm/linux/kernel/git/conor/linux.git
+B: riscv-dt-fixes
+D: no
+M: Conor Dooley <Conor.Dooley@microchip.com>
+
+N: riscv-soc-fixes
+U: https://git.kernel.org/pub/scm/linux/kernel/git/conor/linux.git
+B: riscv-soc-fixes
+D: no
+M: Conor Dooley <Conor.Dooley@microchip.com>
+
+N: fpga-fixes
+U: https://git.kernel.org/pub/scm/linux/kernel/git/fpga/linux-fpga.git
+B: fixes
+D: no
+M: Moritz Fischer <mdf@kernel.org>, Xu Yilun <yilun.xu@intel.com>
+
+N: spdx
+U: https://git.kernel.org/pub/scm/linux/kernel/git/gregkh/spdx.git
+B: spdx-linus
+D: no
+M: Greg KH <greg@kroah.com>
+
+N: gpio-brgl-fixes
+U: https://git.kernel.org/pub/scm/linux/kernel/git/brgl/linux.git
+B: gpio/for-current
+D: no
+M: Bartosz Golaszewski <brgl@bgdev.pl>
+
+N: gpio-intel-fixes
+U: https://git.kernel.org/pub/scm/linux/kernel/git/andy/linux-gpio-intel.git
+B: fixes
+D: no
+M: Andy Shevchenko <andriy.shevchenko@linux.intel.com>
+
+N: pinctrl-intel-fixes
+U: https://git.kernel.org/pub/scm/linux/kernel/git/pinctrl/intel.git
+B: fixes
+D: no
+M: Andy Shevchenko <andriy.shevchenko@linux.intel.com>
+
+N: auxdisplay-fixes
+U: https://git.kernel.org/pub/scm/linux/kernel/git/andy/linux-auxdisplay.git
+B: fixes
+D: no
+M: Andy Shevchenko <andriy.shevchenko@intel.com>
+
+N: kunit-fixes
+U: https://git.kernel.org/pub/scm/linux/kernel/git/shuah/linux-kselftest.git
+B: kunit-fixes
+D: no
+M: Shuah Khan <skhan@linuxfoundation.org>
+
+N: memblock-fixes
+U: https://git.kernel.org/pub/scm/linux/kernel/git/rppt/memblock.git
+B: fixes
+D: no
+M: Mike Rapoport <rppt@kernel.org>
+
+N: renesas-fixes
+U: https://git.kernel.org/pub/scm/linux/kernel/git/geert/renesas-devel.git
+B: fixes
+D: no
+M: Geert Uytterhoeven <geert@linux-m68k.org>
+
+N: perf-current
+U: https://git.kernel.org/pub/scm/linux/kernel/git/perf/perf-tools.git
+B: perf-tools
+D: no
+M: Arnaldo Carvalho de Melo <arnaldo.melo@gmail.com>, Namhyung Kim <namhyung@kernel.org>
+
+N: efi-fixes
+U: https://git.kernel.org/pub/scm/linux/kernel/git/efi/efi.git
+B: urgent
+D: no
+M: Ard Biesheuvel <ardb@kernel.org>
+
+N: battery-fixes
+U: https://git.kernel.org/pub/scm/linux/kernel/git/sre/linux-power-supply.git
+B: fixes
+D: no
+M: Sebastian Reichel <sre@kernel.org>
+
+N: iommufd-fixes
+U: https://git.kernel.org/pub/scm/linux/kernel/git/jgg/iommufd.git
+B: for-rc
+D: no
+M: Jason Gunthorpe <jgg@nvidia.com>
+
+N: rust-fixes
+U: https://github.com/Rust-for-Linux/linux.git
+B: rust-fixes
+D: no
+M: Miguel Ojeda <ojeda@kernel.org>
+
+N: w1-fixes
+U: https://git.kernel.org/pub/scm/linux/kernel/git/krzk/linux-w1.git
+B: fixes
+D: no
+M: Krzysztof Kozlowski <krzk@kernel.org>
+
+N: pmdomain-fixes
+U: https://git.kernel.org/pub/scm/linux/kernel/git/ulfh/linux-pm.git
+B: fixes
+D: no
+M: Ulf Hansson <ulf.hansson@linaro.org>
+
+N: i2c-host-fixes
+U: https://git.kernel.org/pub/scm/linux/kernel/git/andi.shyti/linux.git
+B: i2c/i2c-host-fixes
+D: no
+M: Andi Shyti <andi.shyti@kernel.org>
+
+N: i2c-rust-fixes
+U: https://github.com/ikrtn/rust-for-linux
+B: rust-i2c-fixes
+D: no
+M: Igor Korotin <igor.korotin@linux.dev>
+
+N: sparc-fixes
+U: https://git.kernel.org/pub/scm/linux/kernel/git/alarsson/linux-sparc.git
+B: for-linus
+D: no
+M: Andreas Larsson <andreas@gaisler.com>
+
+N: clk-fixes
+U: https://git.kernel.org/pub/scm/linux/kernel/git/clk/linux.git
+B: clk-fixes
+D: no
+M: Mike Turquette <mturquette@baylibre.com>, Stephen Boyd <sboyd@kernel.org>
+
+N: thead-clk-fixes
+U: https://git.kernel.org/pub/scm/linux/kernel/git/fustini/linux.git
+B: thead-clk-fixes
+D: no
+M: Drew Fustini <fustini@kernel.org>
+
+N: tenstorrent-clk-fixes
+U: https://git.kernel.org/pub/scm/linux/kernel/git/tenstorrent/linux.git
+B: tenstorrent-clk-fixes
+D: no
+M: Drew Fustini <fustini@kernel.org>
+
+N: fustini-config-fixes
+B: riscv-config-fixes
+D: no
+M: Drew Fustini <fustini@kernel.org>
+
+N: pwrseq-fixes
+U: https://git.kernel.org/pub/scm/linux/kernel/git/brgl/linux.git
+B: pwrseq/for-current
+D: no
+M: Bartosz Golaszewski <brgl@bgdev.pl>
+
+N: thead-dt-fixes
+U: https://git.kernel.org/pub/scm/linux/kernel/git/fustini/linux.git
+B: thead-dt-fixes
+D: no
+M: Drew Fustini <fustini@kernel.org>
+
+N: ftrace-fixes
+U: https://git.kernel.org/pub/scm/linux/kernel/git/trace/linux-trace.git
+B: ftrace/fixes
+D: no
+M: Steven Rostedt <rostedt@goodmis.org>, Masami Hiramatsu <mhiramat@kernel.org>
+
+N: ring-buffer-fixes
+U: https://git.kernel.org/pub/scm/linux/kernel/git/trace/linux-trace.git
+B: ring-buffer/fixes
+D: no
+M: Steven Rostedt <rostedt@goodmis.org>, Masami Hiramatsu <mhiramat@kernel.org>
+
+N: trace-fixes
+U: https://git.kernel.org/pub/scm/linux/kernel/git/trace/linux-trace.git
+B: trace/fixes
+D: no
+M: Steven Rostedt <rostedt@goodmis.org>, Masami Hiramatsu <mhiramat@kernel.org>
+
+N: tracefs-fixes
+U: https://git.kernel.org/pub/scm/linux/kernel/git/trace/linux-trace.git
+B: tracefs/fixes
+D: no
+M: Steven Rostedt <rostedt@goodmis.org>, Masami Hiramatsu <mhiramat@kernel.org>
+
+N: spacemit-fixes
+U: https://github.com/spacemit-com/linux
+B: fixes
+D: no
+M: Yixun Lan <dlan@gentoo.org>
+
+N: tip-fixes
+U: https://git.kernel.org/pub/scm/linux/kernel/git/tip/tip.git
+B: tip/urgent
+D: no
+M: Thomas Gleixner <tglx@kernel.org>, Ingo Molnar <mingo@kernel.org>, H. Peter Anvin <hpa@zytor.com>, Peter Zijlstra <peterz@infradead.org>
+
+N: slab-fixes
+U: https://git.kernel.org/pub/scm/linux/kernel/git/vbabka/slab.git
+B: slab/for-next-fixes
+D: no
+M: Vlastimil Babka <vbabka@suse.cz>
+
+N: kexec-fixes
+U: https://git.kernel.org/pub/scm/linux/kernel/git/liveupdate/linux.git
+B: kexec-fixes
+D: no
+M: Mike Rapoport <rppt@kernel.org>, Andrew Morton <akpm@linux-foundation.org>, Pasha Tatashin <pasha.tatashin@soleen.com>, Pratyush Yadav <pratyush@kernel.org>
+
+N: liveupdate-fixes
+U: https://git.kernel.org/pub/scm/linux/kernel/git/liveupdate/linux.git
+B: fixes
+D: no
+M: Mike Rapoport <rppt@kernel.org>, Andrew Morton <akpm@linux-foundation.org>, Pasha Tatashin <pasha.tatashin@soleen.com>, Pratyush Yadav <pratyush@kernel.org>
+
+N: drm-msm-fixes
+U: https://gitlab.freedesktop.org/drm/msm.git
+B: msm-fixes
+D: no
+M: Rob Clark <robdclark@gmail.com>, Sean Paul <seanpaul@chromium.org>
+
+N: uml-fixes
+U: https://git.kernel.org/pub/scm/linux/kernel/git/uml/linux.git
+B: fixes
+D: no
+M: Richard Weinberger <richard@nod.at>
+
+N: fwctl-fixes
+U: https://git.kernel.org/pub/scm/linux/kernel/git/fwctl/fwctl.git
+B: for-rc
+D: no
+M: Jason Gunthorpe <jgg@nvidia.com>, Saeed Mahameed <saeedm@nvidia.com>, Dave Jiang <dave.jiang@intel.com>
+
+N: devsec-tsm-fixes
+U: https://git.kernel.org/pub/scm/linux/kernel/git/devsec/tsm.git
+B: fixes
+D: no
+M: Dan Williams <dan.j.williams@intel.com>, <sathyanarayanan.kuppuswamy@linux.intel.com>, <yilun.xu@intel.com>, <sameo@rivosinc.com>, <aik@amd.com>, <suzuki.poulose@arm.com>, <steven.price@arm.com>, <lukas@wunner.de>
+
+N: drm-rust-fixes
+U: https://gitlab.freedesktop.org/drm/rust/kernel.git
+B: for-linux-next-fixes
+D: no
+M: Alice Ryhl <aliceryhl@google.com>, Danilo Krummrich <dakr@kernel.org>
+
+N: tenstorrent-dt-fixes
+U: https://git.kernel.org/pub/scm/linux/kernel/git/tenstorrent/linux.git
+B: tenstorrent-dt-fixes
+D: no
+M: Drew Fustini <fustini@kernel.org>, Joel Stanley <joel@jms.id.au>
+
+N: nfc-fixes
+U: https://codeberg.org/linux-nfc/linux.git
+B: for-linus
+D: no
+M: David Heidelberg <david@ixit.cz>
+
+N: drm-misc-fixes
+U: https://gitlab.freedesktop.org/drm/misc/kernel.git
+B: for-linux-next-fixes
+D: yes
+M: Simona Vetter <simona.vetter@ffwll.ch>, Intel Graphics <intel-gfx@lists.freedesktop.org>, DRI <dri-devel@lists.freedesktop.org>
+
+N: pending-fixes
+O: branch
+
+N: rust
+U: https://github.com/Rust-for-Linux/linux.git
+B: rust-next
+D: no
+M: Miguel Ojeda <ojeda@kernel.org>
+
+N: rust-interop
+U: https://github.com/Rust-for-Linux/linux.git
+B: interop-next
+D: no
+M: Joel Fernandes <joelagnelf@nvidia.com>, Alexandre Courbot <acourbot@nvidia.com>
+
+N: rust-alloc
+U: https://github.com/Rust-for-Linux/linux.git
+B: alloc-next
+D: no
+M: Danilo Krummrich <dakr@kernel.org>
+
+N: rust-io
+U: https://github.com/Rust-for-Linux/linux.git
+B: io-next
+D: no
+M: Danilo Krummrich <dakr@kernel.org>
+
+N: rust-pin-init
+U: https://github.com/Rust-for-Linux/linux.git
+B: pin-init-next
+D: no
+M: Benno Lossin <lossin@kernel.org>
+
+N: rust-timekeeping
+U: https://github.com/Rust-for-Linux/linux.git
+B: timekeeping-next
+D: no
+M: Andreas Hindborg <a.hindborg@kernel.org>
+
+N: rust-xarray
+U: https://github.com/Rust-for-Linux/linux.git
+B: xarray-next
+D: no
+M: Andreas Hindborg <a.hindborg@kernel.org>
+
+N: rust-analyzer
+U: https://github.com/Rust-for-Linux/linux.git
+B: rust-analyzer-next
+D: no
+M: Tamir Duberstein <tamird@kernel.org>
+
+N: linus
+U: https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git
+B: for-next
+D: no
+M: Linus Torvalds <torvalds@linux-foundation.org>
+X: disabled
+
+N: mm-stable
+U: https://git.kernel.org/pub/scm/linux/kernel/git/akpm/mm
+B: mm-stable
+D: no
+M: Andrew Morton <akpm@linux-foundation.org>
+
+N: mm-nonmm-stable
+U: https://git.kernel.org/pub/scm/linux/kernel/git/akpm/mm
+B: mm-nonmm-stable
+D: no
+M: Andrew Morton <akpm@linux-foundation.org>
+
+N: mm-unstable
+U: https://git.kernel.org/pub/scm/linux/kernel/git/akpm/mm
+B: mm-unstable
+D: no
+M: Andrew Morton <akpm@linux-foundation.org>
+
+N: mm-nonmm-unstable
+U: https://git.kernel.org/pub/scm/linux/kernel/git/akpm/mm
+B: mm-nonmm-unstable
+D: yes
+M: Andrew Morton <akpm@linux-foundation.org>
+
+N: kbuild
+U: https://git.kernel.org/pub/scm/linux/kernel/git/kbuild/linux.git
+B: kbuild-for-next
+D: no
+M: Nathan Chancellor <nathan@kernel.org>, Nicolas Schier <nsc@kernel.org>, KBuild Mailing List <linux-kbuild@vger.kernel.org>
+
+N: clang-format
+U: https://github.com/ojeda/linux.git
+B: clang-format
+D: no
+M: Miguel Ojeda <ojeda@kernel.org>
+
+N: perf
+U: https://git.kernel.org/pub/scm/linux/kernel/git/perf/perf-tools-next.git
+B: perf-tools-next
+D: no
+M: Arnaldo Carvalho de Melo <arnaldo.melo@gmail.com>, Namhyung Kim <namhyung@kernel.org>
+
+N: compiler-attributes
+U: https://github.com/ojeda/linux.git
+B: compiler-attributes
+D: no
+M: Miguel Ojeda <ojeda@kernel.org>
+
+N: dma-mapping
+U: https://git.kernel.org/pub/scm/linux/kernel/git/mszyprowski/linux.git
+B: dma-mapping-for-next
+D: no
+M: Marek Szyprowski <m.szyprowski@samsung.com>
+
+N: asm-generic
+U: https://git.kernel.org/pub/scm/linux/kernel/git/arnd/asm-generic
+B: master
+D: no
+M: Arnd Bergmann <arnd@arndb.de>
+
+N: alpha
+U: https://git.kernel.org/pub/scm/linux/kernel/git/mattst88/alpha.git
+B: alpha-next
+D: no
+M: Matt Turner <mattst88@gmail.com>
+
+N: arm
+U: https://git.kernel.org/pub/scm/linux/kernel/git/rmk/linux.git
+B: for-next
+D: no
+M: Russell King <linux@armlinux.org.uk>
+
+N: arm64
+U: https://git.kernel.org/pub/scm/linux/kernel/git/arm64/linux
+B: for-next/core
+D: no
+M: Catalin Marinas <catalin.marinas@arm.com>, Will Deacon <will@kernel.org>
+
+N: arm-perf
+U: https://git.kernel.org/pub/scm/linux/kernel/git/will/linux.git
+B: for-next/perf
+D: no
+M: Will Deacon <will@kernel.org>
+
+N: arm-soc
+U: https://git.kernel.org/pub/scm/linux/kernel/git/soc/soc.git
+B: for-next
+D: no
+M: Arnd Bergmann <arnd@arndb.de>, soc@lists.linux.dev 
+
+N: amlogic
+U: https://git.kernel.org/pub/scm/linux/kernel/git/amlogic/linux.git
+B: for-next
+D: no
+M: Kevin Hilman <khilman@baylibre.com>, Neil Armstrong <neil.armstrong@linaro.org>
+
+N: asahi-soc
+U: https://github.com/AsahiLinux/linux.git
+B: asahi-soc/for-next
+D: no
+M: Sven Peter <sven@kernel.org>, Janne Grunau <j@jannau.net>
+
+N: at91
+U: https://git.kernel.org/pub/scm/linux/kernel/git/at91/linux.git
+B: at91-next
+D: no
+M: Nicolas Ferre <nicolas.ferre@atmel.com>, Alexandre Belloni <alexandre.belloni@bootlin.com>, Ludovic Desroches <ludovic.desroches@microchip.com>
+
+N: bmc
+U: https://git.kernel.org/pub/scm/linux/kernel/git/bmc/linux.git
+B: for-next
+D: no
+M: Andrew Jeffery <andrew@codeconstruct.com.au>, Joel Stanley <joel@jms.id.au>
+
+N: broadcom
+U: https://github.com/Broadcom/stblinux.git
+B: next
+D: no
+M: Florian Fainelli <f.fainelli@gmail.com>
+
+N: cix
+U: https://git.kernel.org/pub/scm/linux/kernel/git/peter.chen/cix.git
+B: for-next
+D: no
+M: Peter Chen <peter.chen@cixtech.com>
+
+N: davinci
+U: https://git.kernel.org/pub/scm/linux/kernel/git/brgl/linux.git
+B: davinci/for-next
+D: no
+M: Bartosz Golaszewski <brgl@bgdev.pl>
+
+N: drivers-memory
+U: https://git.kernel.org/pub/scm/linux/kernel/git/krzk/linux-mem-ctrl.git
+B: for-next
+D: no
+M: Krzysztof Kozlowski <krzk@kernel.org>
+
+N: fsl
+U: https://git.kernel.org/pub/scm/linux/kernel/git/chleroy/linux.git
+B: soc_fsl
+D: no
+M: Christophe Leroy <chleroy@kernel.org>
+
+N: imx-mxs
+U: https://git.kernel.org/pub/scm/linux/kernel/git/frank.li/linux.git
+B: for-next
+D: no
+M: Frank Li <Frank.li@nxp.com>
+
+N: mediatek
+U: https://git.kernel.org/pub/scm/linux/kernel/git/mediatek/linux.git
+B: for-next
+D: no
+M: Matthias Brugger <matthias.bgg@gmail.com>, AngeloGioacchino Del Regno <angelogioacchino.delregno@kernel.org>
+
+N: mvebu
+U: https://git.kernel.org/pub/scm/linux/kernel/git/gclement/mvebu.git
+B: for-next
+D: no
+M: Jason Cooper <jason@lakedaemon.net>, Andrew Lunn <andrew@lunn.ch>, Gregory Clement <gregory.clement@bootlin.com>, ARM <linux-arm-kernel@lists.infradead.org>
+
+N: omap
+U: https://git.kernel.org/pub/scm/linux/kernel/git/khilman/linux-omap.git
+B: for-next
+D: no
+M: Kevin Hilman <khilman@baylibre.com>
+
+N: qcom
+U: https://git.kernel.org/pub/scm/linux/kernel/git/qcom/linux.git
+B: for-next
+D: no
+M: Konrad Dybcio <konradybcio@kernel.org>, Bjorn Andersson <andersson@kernel.org>, Andy Gross <agross@kernel.org>
+
+N: renesas
+U: https://git.kernel.org/pub/scm/linux/kernel/git/geert/renesas-devel.git
+B: next
+D: no
+M: Geert Uytterhoeven <geert@linux-m68k.org>
+
+N: reset
+U: https://git.pengutronix.de/git/pza/linux
+B: reset/next
+D: no
+M: Philipp Zabel <p.zabel@pengutronix.de>
+
+N: rockchip
+U: https://git.kernel.org/pub/scm/linux/kernel/git/mmind/linux-rockchip.git
+B: for-next
+D: no
+M: Heiko Stuebner <heiko@sntech.de>
+
+N: samsung-krzk
+U: https://git.kernel.org/pub/scm/linux/kernel/git/krzk/linux.git
+B: for-next
+D: no
+M: Krzysztof Kozlowski <krzk@kernel.org>
+
+N: scmi
+U: https://git.kernel.org/pub/scm/linux/kernel/git/sudeep.holla/linux.git
+B: for-linux-next
+D: no
+M: Sudeep Holla <sudeep.holla@arm.com>
+
+N: sophgo
+U: https://github.com/sophgo/linux.git
+B: for-next
+D: no
+M: Chen Wang <unicorn_wang@outlook.com>, Inochi Amaoto <inochiama@outlook.com>
+
+N: sophgo-soc
+U: https://github.com/sophgo/linux.git
+B: soc-for-next
+D: no
+M: Chen Wang <unicorn_wang@outlook.com>, Inochi Amaoto <inochiama@outlook.com>
+
+N: spacemit
+U: https://github.com/spacemit-com/linux
+B: for-next
+D: no
+M: Yixun Lan <dlan@gentoo.org>
+
+N: stm32
+U: https://git.kernel.org/pub/scm/linux/kernel/git/atorgue/stm32.git
+B: stm32-next
+D: no
+M: Alexandre Torgue <alexandre.torgue@st.com>
+
+N: sunxi
+U: https://git.kernel.org/pub/scm/linux/kernel/git/sunxi/linux.git
+B: sunxi/for-next
+D: no
+M: Maxime Ripard <mripard@kernel.org>, Chen-Yu Tsai <wens@csie.org>
+
+N: tee
+U: https://git.kernel.org/pub/scm/linux/kernel/git/jenswi/linux-tee.git
+B: next
+D: no
+M: Jens Wiklander <jens.wiklander@linaro.org>
+
+N: tegra
+U: https://git.kernel.org/pub/scm/linux/kernel/git/tegra/linux.git
+B: for-next
+D: no
+M: Colin Cross <ccross@android.com>, Thierry Reding <treding@nvidia.com>
+
+N: tenstorrent-dt
+U: https://git.kernel.org/pub/scm/linux/kernel/git/tenstorrent/linux.git
+B: tenstorrent-dt-for-next
+D: no
+M: Drew Fustini <fustini@kernel.org>, Joel Stanley <joel@jms.id.au>
+
+N: fustini-config
+B: riscv-config-for-next
+D: no
+M: Drew Fustini <fustini@kernel.org>
+
+N: thead-dt
+U: https://git.kernel.org/pub/scm/linux/kernel/git/fustini/linux.git
+B: thead-dt-for-next
+D: no
+M: Drew Fustini <fustini@kernel.org>
+
+N: ti
+U: https://git.kernel.org/pub/scm/linux/kernel/git/ti/linux.git
+B: ti-next
+D: no
+M: Nishanth Menon <nm@ti.com>, Tero Kristo <kristo@kernel.org>, Santosh Shilimkar <ssantosh@kernel.org>
+
+N: xilinx
+U: https://github.com/Xilinx/linux-xlnx.git
+B: for-next
+D: no
+M: Michal Simek <monstr@monstr.eu>
+
+N: socfpga
+U: https://git.kernel.org/pub/scm/linux/kernel/git/dinguyen/linux.git
+B: for-next
+D: no
+M: Dinh Nguyen <dinguyen@kernel.org>
+
+N: clk
+U: https://git.kernel.org/pub/scm/linux/kernel/git/clk/linux.git
+B: clk-next
+D: no
+M: Mike Turquette <mturquette@baylibre.com>, Stephen Boyd <sboyd@kernel.org>
+
+N: clk-imx
+U: https://git.kernel.org/pub/scm/linux/kernel/git/abelvesa/linux.git
+B: for-next
+D: no
+M: Abel Vesa <abelvesa@kernel.org>
+
+N: clk-renesas
+U: https://git.kernel.org/pub/scm/linux/kernel/git/geert/renesas-drivers.git
+B: renesas-clk
+D: no
+M: Geert Uytterhoeven <geert@linux-m68k.org>
+
+N: thead-clk
+U: https://git.kernel.org/pub/scm/linux/kernel/git/fustini/linux.git
+B: thead-clk-for-next
+D: no
+M: Drew Fustini <fustini@kernel.org>
+
+N: tenstorrent-clk
+U: https://git.kernel.org/pub/scm/linux/kernel/git/tenstorrent/linux.git
+B: tenstorrent-clk-for-next
+D: no
+M: Drew Fustini <fustini@kernel.org>
+
+N: csky
+U: https://github.com/c-sky/csky-linux.git
+B: linux-next
+D: no
+M: Guo Ren <guoren@kernel.org>
+
+N: loongarch
+U: https://git.kernel.org/pub/scm/linux/kernel/git/chenhuacai/linux-loongson.git
+B: loongarch-next
+D: no
+M: Huacai Chen <chenhuacai@loongson.cn>
+
+N: m68k
+U: https://git.kernel.org/pub/scm/linux/kernel/git/geert/linux-m68k.git
+B: for-next
+D: no
+M: Geert Uytterhoeven <geert@linux-m68k.org>
+
+N: m68knommu
+U: https://git.kernel.org/pub/scm/linux/kernel/git/gerg/m68knommu.git
+B: for-next
+D: no
+M: Greg Ungerer <gerg@linux-m68k.org>
+
+N: microblaze
+U: git://git.monstr.eu/linux-2.6-microblaze.git
+B: next
+D: no
+M: Michal Simek <monstr@monstr.eu>
+
+N: mips
+U: https://git.kernel.org/pub/scm/linux/kernel/git/mips/linux.git
+B: mips-next
+D: no
+M: Thomas Bogendoerfer <tsbogend@alpha.franken.de>
+
+N: openrisc
+U: https://github.com/openrisc/linux.git
+B: for-next
+D: no
+M: Stafford Horne <shorne@gmail.com>
+
+N: parisc-hd
+U: https://git.kernel.org/pub/scm/linux/kernel/git/deller/parisc-linux.git
+B: for-next
+D: no
+M: Helge Deller <deller@gmx.de>, Parisc List <linux-parisc@vger.kernel.org>
+
+N: powerpc
+U: https://git.kernel.org/pub/scm/linux/kernel/git/powerpc/linux.git
+B: next
+D: no
+M: Madhavan Srinivasan <maddy@linux.ibm.com>, Michael Ellerman <mpe@ellerman.id.au>, PowerPC <linuxppc-dev@lists.ozlabs.org>
+
+N: risc-v
+U: https://git.kernel.org/pub/scm/linux/kernel/git/riscv/linux.git
+B: for-next
+D: no
+M: Palmer Dabbelt <palmer@dabbelt.com>, Paul Walmsley <paul@pwsan.com>
+
+N: riscv-dt
+U: https://git.kernel.org/pub/scm/linux/kernel/git/conor/linux.git
+B: riscv-dt-for-next
+D: no
+M: Conor Dooley <Conor.Dooley@microchip.com>
+
+N: riscv-soc
+U: https://git.kernel.org/pub/scm/linux/kernel/git/conor/linux.git
+B: riscv-soc-for-next
+D: no
+M: Conor Dooley <Conor.Dooley@microchip.com>
+
+N: s390
+U: https://git.kernel.org/pub/scm/linux/kernel/git/s390/linux.git
+B: for-next
+D: no
+M: Heiko Carstens <hca@linux.ibm.com>, Vasily Gorbik <gor@linux.ibm.com>, Christian Borntraeger <borntraeger@de.ibm.com>
+
+N: sh
+U: https://git.kernel.org/pub/scm/linux/kernel/git/glaubitz/sh-linux.git
+B: for-next
+D: no
+M: John Paul Adrian Glaubitz <glaubitz@physik.fu-berlin.de>
+
+N: sparc
+U: https://git.kernel.org/pub/scm/linux/kernel/git/alarsson/linux-sparc.git
+B: for-next
+D: no
+M: Andreas Larsson <andreas@gaisler.com>
+
+N: uml
+U: https://git.kernel.org/pub/scm/linux/kernel/git/uml/linux.git
+B: next
+D: no
+M: Richard Weinberger <richard@nod.at>
+
+N: xtensa
+U: https://github.com/jcmvbkbc/linux-xtensa.git
+B: xtensa-for-next
+D: no
+M: Max Filippov <jcmvbkbc@gmail.com>
+
+N: fs-next
+I: yes
+B: -
+D: no
+M: <>
+
+N: printk
+U: https://git.kernel.org/pub/scm/linux/kernel/git/printk/linux.git
+B: for-next
+D: no
+M: Petr Mladek <pmladek@suse.com>
+
+N: pci
+U: https://git.kernel.org/pub/scm/linux/kernel/git/pci/pci.git
+B: next
+D: no
+M: Manivannan Sadhasivam <mani@kernel.org>, Bjorn Helgaas <bhelgaas@google.com>, Lorenzo Pieralisi <lpieralisi@kernel.org>, Krzysztof Wilczyński <kwilczynski@kernel.org>
+
+N: pstore
+U: https://git.kernel.org/pub/scm/linux/kernel/git/kees/linux.git
+B: for-next/pstore
+D: no
+M: Kees Cook <kees@kernel.org>
+
+N: hid
+U: https://git.kernel.org/pub/scm/linux/kernel/git/hid/hid.git
+B: for-next
+D: no
+M: Jiri Kosina <jikos@kernel.org>, Benjamin Tissoires <benjamin.tissoires@redhat.com>
+
+N: i2c
+U: https://git.kernel.org/pub/scm/linux/kernel/git/wsa/linux.git
+B: i2c/for-next
+D: no
+M: Wolfram Sang <wsa@kernel.org>
+
+N: i2c-host
+U: https://git.kernel.org/pub/scm/linux/kernel/git/andi.shyti/linux.git
+B: i2c/i2c-host
+D: no
+M: Andi Shyti <andi.shyti@kernel.org>
+
+N: i2c-rust
+U: https://github.com/ikrtn/rust-for-linux
+B: rust-i2c-next
+D: no
+M: Igor Korotin <igor.korotin@linux.dev
+
+N: i3c
+U: https://git.kernel.org/pub/scm/linux/kernel/git/i3c/linux.git
+B: i3c/next
+D: no
+M: Boris Brezillon <boris.brezillon@collabora.com>
+
+N: dmi
+U: https://git.kernel.org/pub/scm/linux/kernel/git/jdelvare/staging.git
+B: dmi-for-next
+D: no
+M: Jean Delvare <jdelvare@suse.de>
+
+N: hwmon-staging
+U: https://git.kernel.org/pub/scm/linux/kernel/git/groeck/linux-staging.git
+B: hwmon-next
+D: no
+M: Guenter Roeck <linux@roeck-us.net>
+
+N: jc_docs
+U: git://git.lwn.net/linux.git
+B: docs-next
+D: no
+M: Jonathan Corbet <corbet@lwn.net>
+
+N: v4l-dvb
+U: git://linuxtv.org/media-ci/media-pending.git
+B: next
+D: no
+M: Mauro Carvalho Chehab <mchehab@kernel.org>
+
+N: v4l-dvb-next
+U: git://linuxtv.org/mchehab/media-next.git
+B: master
+D: no
+M: Mauro Carvalho Chehab <mchehab@kernel.org>
+
+N: pm
+U: https://git.kernel.org/pub/scm/linux/kernel/git/rafael/linux-pm.git
+B: linux-next
+D: no
+M: Rafael J. Wysocki <rafael@kernel.org>
+
+N: cpufreq-arm
+U: https://git.kernel.org/pub/scm/linux/kernel/git/vireshk/pm.git
+B: cpufreq/arm/linux-next
+D: no
+M: Viresh Kumar <viresh.kumar@linaro.org>
+
+N: cpupower
+U: https://git.kernel.org/pub/scm/linux/kernel/git/shuah/linux.git
+B: cpupower
+D: no
+M: Shuah Khan <shuah@kernel.org>
+
+N: devfreq
+U: https://git.kernel.org/pub/scm/linux/kernel/git/chanwoo/linux.git
+B: devfreq-next
+D: no
+M: Chanwoo Choi <cw00.choi@samsung.com>
+
+N: pmdomain
+U: https://git.kernel.org/pub/scm/linux/kernel/git/ulfh/linux-pm.git
+B: next
+D: no
+M: Ulf Hansson <ulf.hansson@linaro.org>
+
+N: opp
+U: https://git.kernel.org/pub/scm/linux/kernel/git/vireshk/pm.git
+B: opp/linux-next
+D: no
+M: Viresh Kumar <viresh.kumar@linaro.org>
+
+N: thermal
+U: https://git.kernel.org/pub/scm/linux/kernel/git/thermal/linux.git
+B: thermal/linux-next
+D: no
+M: Daniel Lezcano <daniel.lezcano@linaro.org>, Zhang Rui <rui.zhang@intel.com>
+
+N: rdma
+U: https://git.kernel.org/pub/scm/linux/kernel/git/rdma/rdma.git
+B: for-next
+D: no
+M: Jason Gunthorpe <jgg@nvidia.com>, Leon Romanovsky <leonro@nvidia.com>
+
+N: net-next
+U: https://git.kernel.org/pub/scm/linux/kernel/git/netdev/net-next.git
+B: main
+D: no
+M: David Miller <davem@davemloft.net>, Jakub Kicinski <kuba@kernel.org>, Paolo Abeni <pabeni@redhat.com>, Networking <netdev@vger.kernel.org>
+
+N: bpf-next
+U: https://git.kernel.org/pub/scm/linux/kernel/git/bpf/bpf-next.git
+B: for-next
+D: no
+M: Daniel Borkmann <daniel@iogearbox.net>, Alexei Starovoitov <ast@kernel.org>, Andrii Nakryiko <andrii@kernel.org>, bpf <bpf@vger.kernel.org>, Networking <netdev@vger.kernel.org>
+
+N: ipsec-next
+U: https://git.kernel.org/pub/scm/linux/kernel/git/klassert/ipsec-next.git
+B: master
+D: no
+M: Steffen Klassert <steffen.klassert@secunet.com>
+
+N: mlx5-next
+U: https://git.kernel.org/pub/scm/linux/kernel/git/mellanox/linux.git
+B: mlx5-next
+D: no
+M: Leon Romanovsky <leon@kernel.org>
+
+N: netfilter-next
+U: https://git.kernel.org/pub/scm/linux/kernel/git/netfilter/nf-next.git
+B: main
+D: no
+M: Pablo Neira Ayuso <pablo@netfilter.org>, NetFilter <netfilter-devel@vger.kernel.org>
+
+N: ipvs-next
+U: https://git.kernel.org/pub/scm/linux/kernel/git/horms/ipvs-next.git
+B: main
+D: no
+M: Simon Horman <horms@verge.net.au>
+
+N: bluetooth
+U: https://git.kernel.org/pub/scm/linux/kernel/git/bluetooth/bluetooth-next.git
+B: master
+D: no
+M: Marcel Holtmann <marcel@holtmann.org>, Johan Hedberg <johan.hedberg@gmail.com>
+
+N: wireless-next
+U: https://git.kernel.org/pub/scm/linux/kernel/git/wireless/wireless-next.git
+B: for-next
+D: no
+M: Johannes Berg <johannes@sipsolutions.net>, Wireless <linux-wireless@vger.kernel.org>
+
+N: ath-next
+U: https://git.kernel.org/pub/scm/linux/kernel/git/ath/ath.git
+B: for-next
+D: no
+M: Jeff Johnson <jjohnson@kernel.org>, Ath10k List <ath10k@lists.infradead.org>
+
+N: iwlwifi-next
+U: https://git.kernel.org/pub/scm/linux/kernel/git/iwlwifi/iwlwifi-next.git
+B: next
+D: no
+M: Miriam Rachel Korenblit <miriam.rachel.korenblit@intel.com>, Johannes Berg <johannes@sipsolutions.net>
+
+N: wpan-next
+U: https://git.kernel.org/pub/scm/linux/kernel/git/wpan/wpan-next.git
+B: master
+D: no
+M: Miquel Raynal <miquel.raynal@bootlin.com>, Alexander Aring <alex.aring@gmail.com>, Stefan Schmidt <stefan@datenfreihafen.org>
+
+N: wpan-staging
+U: https://git.kernel.org/pub/scm/linux/kernel/git/wpan/wpan-next.git
+B: staging
+D: no
+M: Miquel Raynal <miquel.raynal@bootlin.com>, Alexander Aring <alex.aring@gmail.com>, Stefan Schmidt <stefan@datenfreihafen.org>
+
+N: mtd
+U: https://git.kernel.org/pub/scm/linux/kernel/git/mtd/linux.git
+B: mtd/next
+D: no
+M: Richard Weinberger <richard.weinberger@gmail.com>
+
+N: nand
+U: https://git.kernel.org/pub/scm/linux/kernel/git/mtd/linux.git
+B: nand/next
+D: no
+M: Miquel Raynal <miquel.raynal@bootlin.com>, Boris Brezillon <boris.brezillon@collabora.com>
+
+N: spi-nor
+U: https://git.kernel.org/pub/scm/linux/kernel/git/mtd/linux.git
+B: spi-nor/next
+D: no
+M: Tudor Ambarus <Tudor.Ambarus@microchip.com>, Vignesh Raghavendra <vigneshr@ti.com>
+
+N: crypto
+U: https://git.kernel.org/pub/scm/linux/kernel/git/herbert/cryptodev-2.6.git
+B: master
+D: no
+M: Herbert Xu <herbert@gondor.apana.org.au>, Linux Crypto List <linux-crypto@vger.kernel.org>
+
+N: libcrypto
+U: https://git.kernel.org/pub/scm/linux/kernel/git/ebiggers/linux.git
+B: libcrypto-next
+D: no
+M: Eric Biggers <ebiggers@kernel.org>, Jason A. Donenfeld <Jason@zx2c4.com>, Ard Biesheuvel <ardb@kernel.org>, Linux Crypto List <linux-crypto@vger.kernel.org>
+
+N: drm
+U: https://gitlab.freedesktop.org/drm/kernel.git
+B: drm-next
+D: no
+M: Dave Airlie <airlied@redhat.com>, DRI <dri-devel@lists.freedesktop.org>
+
+N: drm-exynos
+U: https://git.kernel.org/pub/scm/linux/kernel/git/daeinki/drm-exynos.git
+B: for-linux-next
+D: no
+M: Inki Dae <daeinki@gmail.com>
+
+N: drm-misc
+U: https://gitlab.freedesktop.org/drm/misc/kernel.git
+B: for-linux-next
+D: no
+M: Simona Vetter <simona.vetter@ffwll.ch>, Intel Graphics <intel-gfx@lists.freedesktop.org>, DRI <dri-devel@lists.freedesktop.org>
+
+N: amdgpu
+U: https://gitlab.freedesktop.org/agd5f/linux.git
+B: drm-next
+D: no
+M: Alex Deucher <alexdeucher@gmail.com>
+
+N: drm-intel
+U: https://gitlab.freedesktop.org/drm/i915/kernel.git
+B: for-linux-next
+D: no
+M: Simona Vetter <simona.vetter@ffwll.ch>, Jani Nikula <jani.nikula@linux.intel.com>, Joonas Lahtinen <joonas.lahtinen@linux.intel.com>, Rodrigo Vivi <rodrigo.vivi@intel.com>, Intel Graphics <intel-gfx@lists.freedesktop.org>, DRI <dri-devel@lists.freedesktop.org>
+
+N: drm-msm
+U: https://gitlab.freedesktop.org/drm/msm.git
+B: msm-next
+D: no
+M: Rob Clark <robdclark@gmail.com>, Sean Paul <seanpaul@chromium.org>
+
+N: drm-msm-lumag
+U: https://gitlab.freedesktop.org/lumag/msm.git
+B: msm-next-lumag
+D: no
+M: Dmitry Baryshkov <lumag@kernel.org>
+
+N: drm-xe
+U: https://gitlab.freedesktop.org/drm/xe/kernel.git
+B: drm-xe-next
+D: no
+M: Thomas Hellström <thomas.hellstrom@linux.intel.com>, DRM XE List <intel-xe@lists.freedesktop.org>
+
+N: drm-rust
+U: https://gitlab.freedesktop.org/drm/rust/kernel.git
+B: for-linux-next
+D: no
+M: Alice Ryhl <aliceryhl@google.com>, Danilo Krummrich <dakr@kernel.org>
+
+N: drm-nova
+U: https://gitlab.freedesktop.org/drm/nova.git
+B: nova-next
+D: no
+M: Danilo Krummrich <dakr@kernel.org>
+
+N: etnaviv
+U: https://git.pengutronix.de/git/lst/linux
+B: etnaviv/next
+D: no
+M: Lucas Stach <l.stach@pengutronix.de>
+
+N: fbdev
+U: https://git.kernel.org/pub/scm/linux/kernel/git/deller/linux-fbdev.git
+B: for-next
+D: no
+M: Helge Deller <deller@gmx.de>
+
+N: regmap
+U: https://git.kernel.org/pub/scm/linux/kernel/git/broonie/regmap.git
+B: for-next
+D: no
+M: Mark Brown <broonie@kernel.org>
+
+N: sound
+U: https://git.kernel.org/pub/scm/linux/kernel/git/tiwai/sound.git
+B: for-next
+D: no
+M: Takashi Iwai <tiwai@suse.de>
+
+N: ieee1394
+U: https://git.kernel.org/pub/scm/linux/kernel/git/ieee1394/linux1394.git
+B: for-next
+D: no
+M: Takashi Sakamoto <o-takashi@sakamocchi.jp>
+
+N: sound-asoc
+U: https://git.kernel.org/pub/scm/linux/kernel/git/broonie/sound.git
+B: for-next
+D: no
+M: Mark Brown <broonie@kernel.org>, Liam Girdwood <lgirdwood@gmail.com>
+
+N: modules
+U: https://git.kernel.org/pub/scm/linux/kernel/git/modules/linux.git
+B: modules-next
+D: no
+M: Luis Chamberlain <mcgrof@kernel.org>, Petr Pavlu <petr.pavlu@suse.com>, Sami Tolvanen <samitolvanen@google.com>, Daniel Gomez <da.gomez@samsung.com>
+
+N: input
+U: https://git.kernel.org/pub/scm/linux/kernel/git/dtor/input.git
+B: next
+D: no
+M: Dmitry Torokhov <dmitry.torokhov@gmail.com>
+
+N: block
+U: https://git.kernel.org/pub/scm/linux/kernel/git/axboe/linux.git
+B: for-next
+D: no
+M: Jens Axboe <axboe@kernel.dk>
+
+N: device-mapper
+U: https://git.kernel.org/pub/scm/linux/kernel/git/device-mapper/linux-dm.git
+B: for-next
+D: no
+M: Alasdair G Kergon <agk@redhat.com>, Mike Snitzer <snitzer@kernel.org>
+
+N: libata
+U: https://git.kernel.org/pub/scm/linux/kernel/git/libata/linux
+B: for-next
+D: no
+M: Damien Le Moal <damien.lemoal@opensource.wdc.com>
+
+N: pcmcia
+U: https://git.kernel.org/pub/scm/linux/kernel/git/brodo/linux.git
+B: pcmcia-next
+D: no
+M: Dominik Brodowski <linux@dominikbrodowski.net>
+
+N: mmc
+U: https://git.kernel.org/pub/scm/linux/kernel/git/ulfh/mmc.git
+B: next
+D: no
+M: Ulf Hansson <ulf.hansson@linaro.org>
+
+N: mfd
+U: https://git.kernel.org/pub/scm/linux/kernel/git/lee/mfd.git
+B: for-mfd-next
+D: no
+M: Lee Jones <lee@kernel.org>
+
+N: backlight
+U: https://git.kernel.org/pub/scm/linux/kernel/git/lee/backlight.git
+B: for-backlight-next
+D: no
+M: Lee Jones <lee@kernel.org>
+
+N: battery
+U: https://git.kernel.org/pub/scm/linux/kernel/git/sre/linux-power-supply.git
+B: for-next
+D: no
+M: Sebastian Reichel <sre@kernel.org>
+
+N: regulator
+U: https://git.kernel.org/pub/scm/linux/kernel/git/broonie/regulator.git
+B: for-next
+D: no
+M: Mark Brown <broonie@kernel.org>, Liam Girdwood <lgirdwood@gmail.com>
+
+N: security
+U: https://git.kernel.org/pub/scm/linux/kernel/git/pcmoore/lsm.git
+B: next
+D: no
+M: Paul Moore <paul@paul-moore.com>
+
+N: apparmor
+U: https://git.kernel.org/pub/scm/linux/kernel/git/jj/linux-apparmor
+B: apparmor-next
+D: no
+M: John Johansen <john.johansen@canonical.com>
+
+N: integrity
+U: https://git.kernel.org/pub/scm/linux/kernel/git/zohar/linux-integrity
+B: next-integrity
+D: no
+M: Mimi Zohar <zohar@linux.vnet.ibm.com>, Dmitry Kasatkin <dmitry.kasatkin@gmail.com>
+
+N: selinux
+U: https://git.kernel.org/pub/scm/linux/kernel/git/pcmoore/selinux.git
+B: next
+D: no
+M: Paul Moore <paul@paul-moore.com>
+
+N: smack
+U: https://github.com/cschaufler/smack-next
+B: next
+D: no
+M: Casey Schaufler <casey@schaufler-ca.com>
+
+N: tomoyo
+U: git://git.code.sf.net/p/tomoyo/tomoyo.git
+B: master
+D: no
+M: Tetsuo Handa <penguin-kernel@i-love.sakura.ne.jp>
+
+N: tpmdd-tpm
+U: https://git.kernel.org/pub/scm/linux/kernel/git/jarkko/linux-tpmdd.git
+B: for-next-tpm
+D: no
+M: Jarkko Sakkinen <jarkko@kernel.org>
+
+N: tpmdd-keys
+U: https://git.kernel.org/pub/scm/linux/kernel/git/jarkko/linux-tpmdd.git
+B: for-next-keys
+D: no
+M: Jarkko Sakkinen <jarkko@kernel.org>
+
+N: watchdog
+U: git://www.linux-watchdog.org/linux-watchdog-next.git
+B: watchdog-next
+D: no
+M: Guenter Roeck <linux@roeck-us.net>
+
+N: iommu
+U: https://git.kernel.org/pub/scm/linux/kernel/git/iommu/linux.git
+B: next
+D: no
+M: Joerg Roedel <joro@8bytes.org>
+
+N: audit
+U: https://git.kernel.org/pub/scm/linux/kernel/git/pcmoore/audit.git
+B: next
+D: no
+M: Paul Moore <paul@paul-moore.com>
+
+N: devicetree
+U: https://git.kernel.org/pub/scm/linux/kernel/git/robh/linux.git
+B: for-next
+D: no
+M: Rob Herring <robh@kernel.org>
+
+N: dt-krzk
+U: https://git.kernel.org/pub/scm/linux/kernel/git/krzk/linux-dt.git
+B: for-next
+D: no
+M: Krzysztof Kozlowski <krzk@kernel.org>
+
+N: mailbox
+U: https://git.kernel.org/pub/scm/linux/kernel/git/jassibrar/mailbox.git
+B: for-next
+D: no
+M: Jassi Brar <jassisinghbrar@gmail.com>
+
+N: spi
+U: https://git.kernel.org/pub/scm/linux/kernel/git/broonie/spi.git
+B: for-next
+D: no
+M: Mark Brown <broonie@kernel.org>
+
+N: tip
+U: https://git.kernel.org/pub/scm/linux/kernel/git/tip/tip.git
+B: master
+D: no
+M: Thomas Gleixner <tglx@kernel.org>, Ingo Molnar <mingo@kernel.org>, H. Peter Anvin <hpa@zytor.com>, Peter Zijlstra <peterz@infradead.org>
+
+N: kexec
+U: https://git.kernel.org/pub/scm/linux/kernel/git/liveupdate/linux.git
+B: kexec-next
+D: no
+M: Mike Rapoport <rppt@kernel.org>, Andrew Morton <akpm@linux-foundation.org>, Pasha Tatashin <pasha.tatashin@soleen.com>, Pratyush Yadav <pratyush@kernel.org>
+
+N: liveupdate
+U: https://git.kernel.org/pub/scm/linux/kernel/git/liveupdate/linux.git
+B: next
+D: no
+M: Mike Rapoport <rppt@kernel.org>, Andrew Morton <akpm@linux-foundation.org>, Pasha Tatashin <pasha.tatashin@soleen.com>, Pratyush Yadav <pratyush@kernel.org>
+
+N: clockevents
+U: https://git.kernel.org/pub/scm/linux/kernel/git/daniel.lezcano/linux.git
+B: timers/drivers/next
+D: no
+M: Daniel Lezcano <daniel.lezcano@linaro.org>
+
+N: edac
+U: https://git.kernel.org/pub/scm/linux/kernel/git/ras/ras.git
+B: edac-for-next
+D: no
+M: Mauro Carvalho Chehab <mchehab+samsung@kernel.org>, Borislav Petkov <bp@alien8.de>, Tony Luck <tony.luck@intel.com>
+
+N: ftrace
+U: https://git.kernel.org/pub/scm/linux/kernel/git/trace/linux-trace.git
+B: for-next
+D: no
+M: Steven Rostedt <rostedt@goodmis.org>, Masami Hiramatsu <mhiramat@kernel.org>
+
+N: rcu
+U: https://git.kernel.org/pub/scm/linux/kernel/git/rcu/linux
+B: next
+D: no
+M: Paul E. McKenney <paulmck@kernel.org>, Frederic Weisbecker <frederic@kernel.org>, Neeraj Upadhyay <neeraj.upadhyay@kernel.org>, Boqun Feng <boqun.feng@gmail.com>, Uladzislau Rezki <urezki@gmail.com>
+
+N: paulmck
+U: https://git.kernel.org/pub/scm/linux/kernel/git/paulmck/linux-rcu.git
+B: non-rcu/next
+D: no
+M: Paul E. McKenney <paulmck@kernel.org>
+
+N: kvm
+U: git://git.kernel.org/pub/scm/virt/kvm/kvm.git
+B: next
+D: no
+M: Paolo Bonzini <pbonzini@redhat.com>, KVM <kvm@vger.kernel.org>
+
+N: kvm-arm
+U: https://git.kernel.org/pub/scm/linux/kernel/git/kvmarm/kvmarm.git
+B: next
+D: no
+M: Christoffer Dall <cdall@cs.columbia.edu>, Marc Zyngier <maz@kernel.org>
+
+N: kvms390
+U: https://git.kernel.org/pub/scm/linux/kernel/git/kvms390/linux.git
+B: next
+D: no
+M: Christian Borntraeger <borntraeger@de.ibm.com>, Janosch Frank <frankja@linux.ibm.com>
+
+N: kvm-ppc
+U: https://git.kernel.org/pub/scm/linux/kernel/git/powerpc/linux.git
+B: topic/ppc-kvm
+D: no
+M: Madhavan Srinivasan <maddy@linux.ibm.com>, PowerPC <linuxppc-dev@lists.ozlabs.org>
+
+N: kvm-riscv
+U: https://github.com/kvm-riscv/linux.git
+B: riscv_kvm_next
+D: no
+M: Anup Patel <anup@brainfault.org>
+
+N: kvm-x86
+U: https://github.com/kvm-x86/linux.git
+B: next
+D: no
+M: Sean Christopherson <seanjc@google.com>
+
+N: xen-tip
+U: https://git.kernel.org/pub/scm/linux/kernel/git/xen/tip.git
+B: linux-next
+D: no
+M: Juergen Gross <jgross@suse.com>, Konrad Rzeszutek Wilk <konrad.wilk@oracle.com>, Stefano Stabellini <sstabellini@kernel.org>, Boris Ostrovsky <boris.ostrovsky@oracle.com>, Xen Devel <xen-devel@lists.xenproject.org>
+
+N: percpu
+U: https://git.kernel.org/pub/scm/linux/kernel/git/dennis/percpu.git
+B: for-next
+D: no
+M: Dennis Zhou <dennis@kernel.org>, Tejun Heo <tj@kernel.org>, Christoph Lameter <cl@linux-foundation.org>, Ingo Molnar <mingo@kernel.org>
+
+N: workqueues
+U: https://git.kernel.org/pub/scm/linux/kernel/git/tj/wq.git
+B: for-next
+D: no
+M: Tejun Heo <tj@kernel.org>
+
+N: sched-ext
+U: https://git.kernel.org/pub/scm/linux/kernel/git/tj/sched_ext.git
+B: for-next
+D: no
+M: Tejun Heo <tj@kernel.org>
+
+N: drivers-x86
+U: https://git.kernel.org/pub/scm/linux/kernel/git/pdx86/platform-drivers-x86.git
+B: for-next
+D: no
+M: Hans de Goede <hansg@kernel.org>, Mark Gross <markgross@kernel.org>
+
+N: chrome-platform
+U: https://git.kernel.org/pub/scm/linux/kernel/git/chrome-platform/linux.git
+B: for-next
+D: no
+M: Benson Leung <bleung@google.com>, Guenter Roeck <groeck@chromium.org>, Dmitry Torokhov <dmitry.torokhov@gmail.com>
+
+N: chrome-platform-firmware
+U: https://git.kernel.org/pub/scm/linux/kernel/git/chrome-platform/linux.git
+B: for-firmware-next
+D: no
+M: Tzung-Bi Shih <tzungbi@kernel.org>, Chrome Platform <chrome-platform@lists.linux.dev>
+
+N: hsi
+U: https://git.kernel.org/pub/scm/linux/kernel/git/sre/linux-hsi.git
+B: for-next
+D: no
+M: Sebastian Reichel <sre@kernel.org>
+
+N: leds-lj
+U: https://git.kernel.org/pub/scm/linux/kernel/git/lee/leds.git
+B: for-leds-next
+D: no
+M: Lee Jones <lee@kernel.org>
+
+N: ipmi
+U: https://github.com/cminyard/linux-ipmi.git
+B: for-next
+D: no
+M: Corey Minyard <corey@minyard.net>
+
+N: driver-core
+U: https://git.kernel.org/pub/scm/linux/kernel/git/driver-core/driver-core.git
+B: driver-core-next
+D: no
+M: Greg KH <greg@kroah.com>, Danilo Krummrich <dakr@kernel.org>, Rafael J. Wysocki <rafael@kernel.org>
+
+N: usb
+U: https://git.kernel.org/pub/scm/linux/kernel/git/gregkh/usb.git
+B: usb-next
+D: no
+M: Greg KH <greg@kroah.com>
+
+N: thunderbolt
+U: https://git.kernel.org/pub/scm/linux/kernel/git/westeri/thunderbolt.git
+B: next
+D: no
+M: Mika Westerberg <mika.westerberg@linux.intel.com>
+
+N: usb-serial
+U: https://git.kernel.org/pub/scm/linux/kernel/git/johan/usb-serial.git
+B: usb-next
+D: no
+M: Johan Hovold <johan@kernel.org>
+
+N: tty
+U: https://git.kernel.org/pub/scm/linux/kernel/git/gregkh/tty.git
+B: tty-next
+D: no
+M: Greg KH <greg@kroah.com>
+
+N: char-misc
+U: https://git.kernel.org/pub/scm/linux/kernel/git/gregkh/char-misc.git
+B: char-misc-next
+D: no
+M: Greg KH <greg@kroah.com>, Arnd Bergmann <arnd@arndb.de>
+
+N: coresight
+U: https://git.kernel.org/pub/scm/linux/kernel/git/coresight/linux.git
+B: next
+D: no
+M: Mathieu Poirier <mathieu.poirier@linaro.org>
+
+N: fastrpc
+U: https://git.kernel.org/pub/scm/linux/kernel/git/srini/fastrpc.git
+B: for-next
+D: no
+M: Srini Kandagatla <srinivas.kandagatla@linaro.org>
+
+N: fpga
+U: https://git.kernel.org/pub/scm/linux/kernel/git/fpga/linux-fpga.git
+B: for-next
+D: no
+M: Moritz Fischer <mdf@kernel.org>, Xu Yilun <yilun.xu@intel.com>
+
+N: icc
+U: https://git.kernel.org/pub/scm/linux/kernel/git/djakov/icc.git
+B: icc-next
+D: no
+M: Georgi Djakov <djakov@kernel.org>
+
+N: iio
+U: https://git.kernel.org/pub/scm/linux/kernel/git/jic23/iio.git
+B: togreg
+D: no
+M: Jonathan Cameron <jic23@kernel.org>
+
+N: nfc
+U: https://codeberg.org/linux-nfc/linux.git
+B: for-next
+D: no
+M: David Heidelberg <david@ixit.cz>
+
+N: phy-next
+U: https://git.kernel.org/pub/scm/linux/kernel/git/phy/linux-phy.git
+B: next
+D: no
+M: Kishon Vijay Abraham I <kishon@kernel.org>, Vinod Koul <vkoul@kernel.org>
+
+N: soundwire
+U: https://git.kernel.org/pub/scm/linux/kernel/git/vkoul/soundwire.git
+B: next
+D: no
+M: Vinod Koul <vkoul@kernel.org>
+
+N: extcon
+U: https://git.kernel.org/pub/scm/linux/kernel/git/chanwoo/extcon.git
+B: extcon-next
+D: no
+M: Chanwoo Choi <cw00.choi@samsung.com>
+
+N: gnss
+U: https://git.kernel.org/pub/scm/linux/kernel/git/johan/gnss.git
+B: gnss-next
+D: no
+M: Johan Hovold <johan@kernel.org>
+
+N: vfio
+U: https://github.com/awilliam/linux-vfio.git
+B: next
+D: no
+M: Alex Williamson <alex@shazbot.org>
+
+N: w1
+U: https://git.kernel.org/pub/scm/linux/kernel/git/krzk/linux-w1.git
+B: for-next
+D: no
+M: Krzysztof Kozlowski <krzk@kernel.org>
+
+N: spmi
+U: https://git.kernel.org/pub/scm/linux/kernel/git/sboyd/spmi.git
+B: spmi-next
+D: no
+M: Stephen Boyd <sboyd@kernel.org>
+
+N: staging
+U: https://git.kernel.org/pub/scm/linux/kernel/git/gregkh/staging.git
+B: staging-next
+D: no
+M: Greg KH <greg@kroah.com>
+
+N: counter-next
+U: https://git.kernel.org/pub/scm/linux/kernel/git/wbg/counter.git
+B: counter-next
+D: no
+M: William Breathitt Gray <wbg@kernel.org>
+
+N: mux
+U: https://gitlab.com/peda-linux/mux.git
+B: for-next
+D: no
+M: Peter Rosin <peda@axentia.se>
+
+N: dmaengine
+U: https://git.kernel.org/pub/scm/linux/kernel/git/vkoul/dmaengine.git
+B: next
+D: no
+M: Vinod Koul <vkoul@kernel.org>
+
+N: cgroup
+U: https://git.kernel.org/pub/scm/linux/kernel/git/tj/cgroup.git
+B: for-next
+D: no
+M: Tejun Heo <tj@kernel.org>
+
+N: scsi
+U: https://git.kernel.org/pub/scm/linux/kernel/git/jejb/scsi.git
+B: for-next
+D: no
+M: James Bottomley <James.Bottomley@HansenPartnership.com>
+
+N: scsi-mkp
+U: https://git.kernel.org/pub/scm/linux/kernel/git/mkp/scsi.git
+B: for-next
+D: no
+M: Martin K. Petersen <martin.petersen@oracle.com>
+
+N: vhost
+U: https://git.kernel.org/pub/scm/linux/kernel/git/mst/vhost.git
+B: linux-next
+D: no
+M: Michael S. Tsirkin <mst@redhat.com>
+
+N: rpmsg
+U: https://git.kernel.org/pub/scm/linux/kernel/git/remoteproc/linux.git
+B: for-next
+D: no
+M: Bjorn Andersson <andersson@kernel.org>, Mathieu Poirier <mathieu.poirier@linaro.org>
+
+N: gpio-brgl
+U: https://git.kernel.org/pub/scm/linux/kernel/git/brgl/linux.git
+B: gpio/for-next
+D: no
+M: Bartosz Golaszewski <brgl@bgdev.pl>
+
+N: gpio-intel
+U: https://git.kernel.org/pub/scm/linux/kernel/git/andy/linux-gpio-intel.git
+B: for-next
+D: no
+M: Andy Shevchenko <andriy.shevchenko@linux.intel.com>
+
+N: pinctrl
+U: https://git.kernel.org/pub/scm/linux/kernel/git/linusw/linux-pinctrl.git
+B: for-next
+D: no
+M: Linus Walleij <linusw@kernel.org>
+
+N: pinctrl-intel
+U: https://git.kernel.org/pub/scm/linux/kernel/git/pinctrl/intel.git
+B: for-next
+D: no
+M: Andy Shevchenko <andriy.shevchenko@linux.intel.com>
+
+N: pinctrl-renesas
+U: https://git.kernel.org/pub/scm/linux/kernel/git/geert/renesas-drivers.git
+B: renesas-pinctrl
+D: no
+M: Geert Uytterhoeven <geert@linux-m68k.org>
+
+N: pinctrl-samsung
+U: https://git.kernel.org/pub/scm/linux/kernel/git/pinctrl/samsung.git
+B: for-next
+D: no
+M: Krzysztof Kozlowski <krzk@kernel.org>, Sylwester Nawrocki <s.nawrocki@samsung.com>
+
+N: pwm
+U: https://git.kernel.org/pub/scm/linux/kernel/git/ukleinek/linux.git
+B: pwm/for-next
+D: no
+M: Uwe Kleine-König <ukleinek@kernel.org>
+
+N: ktest
+U: https://git.kernel.org/pub/scm/linux/kernel/git/rostedt/linux-ktest.git
+B: for-next
+D: no
+M: Steven Rostedt <rostedt@goodmis.org>
+
+N: kselftest
+U: https://git.kernel.org/pub/scm/linux/kernel/git/shuah/linux-kselftest.git
+B: next
+D: no
+M: Shuah Khan <shuah@kernel.org>
+
+N: kunit
+U: https://git.kernel.org/pub/scm/linux/kernel/git/shuah/linux-kselftest.git
+B: test
+D: no
+M: Shuah Khan <skhan@linuxfoundation.org>
+
+N: kunit-next
+U: https://git.kernel.org/pub/scm/linux/kernel/git/shuah/linux-kselftest.git
+B: kunit
+D: no
+M: Shuah Khan <skhan@linuxfoundation.org>
+
+N: livepatching
+U: https://git.kernel.org/pub/scm/linux/kernel/git/livepatching/livepatching.git
+B: for-next
+D: no
+M: Jiri Kosina <jikos@kernel.org>, Josh Poimboeuf <jpoimboe@kernel.org>, Miroslav Benes <mbenes@suse.cz>, Petr Mladek <pmladek@suse.com>, Joe Lawrence <joe.lawrence@redhat.com>
+
+N: rtc
+U: https://git.kernel.org/pub/scm/linux/kernel/git/abelloni/linux.git
+B: rtc-next
+D: no
+M: Alexandre Belloni <alexandre.belloni@bootlin.com>
+
+N: nvdimm
+U: https://git.kernel.org/pub/scm/linux/kernel/git/nvdimm/nvdimm.git
+B: libnvdimm-for-next
+D: no
+M: Dan Williams <dan.j.williams@intel.com>
+
+N: at24
+U: https://git.kernel.org/pub/scm/linux/kernel/git/brgl/linux.git
+B: at24/for-next
+D: no
+M: Bartosz Golaszewski <brgl@bgdev.pl>
+
+N: ntb
+U: https://github.com/jonmason/ntb.git
+B: ntb-next
+D: no
+M: Jon Mason <jdmason@kudzu.us>, NTB Mailing List <linux-ntb@googlegroups.com>
+
+N: seccomp
+U: https://git.kernel.org/pub/scm/linux/kernel/git/kees/linux.git
+B: for-next/seccomp
+D: no
+M: Kees Cook <kees@kernel.org>
+
+N: slimbus
+U: https://git.kernel.org/pub/scm/linux/kernel/git/srini/slimbus.git
+B: for-next
+D: no
+M: Srinivas Kandagatla <srini@kernel.org>
+
+N: nvmem
+U: https://git.kernel.org/pub/scm/linux/kernel/git/srini/nvmem.git
+B: for-next
+D: no
+M: Srinivas Kandagatla <srini@kernel.org>
+
+N: hyperv
+U: https://git.kernel.org/pub/scm/linux/kernel/git/hyperv/linux.git
+B: hyperv-next
+D: no
+M: Wei Liu <wei.liu@kernel.org>
+
+N: auxdisplay
+U: https://git.kernel.org/pub/scm/linux/kernel/git/andy/linux-auxdisplay.git
+B: for-next
+D: no
+M: Andy Shevchenko <andriy.shevchenko@intel.com>
+
+N: kgdb
+U: https://git.kernel.org/pub/scm/linux/kernel/git/danielt/linux.git
+B: kgdb/for-next
+D: no
+M: Daniel Thompson <daniel.thompson@linaro.org>
+
+N: hmm
+U: https://git.kernel.org/pub/scm/linux/kernel/git/rdma/rdma.git
+B: hmm
+D: no
+M: Jason Gunthorpe <jgg@nvidia.com>
+
+N: cfi
+U: https://git.kernel.org/pub/scm/linux/kernel/git/mtd/linux.git
+B: cfi/next
+D: no
+M: Vignesh Raghavendra <vigneshr@ti.com>
+
+N: mhi
+U: https://git.kernel.org/pub/scm/linux/kernel/git/mani/mhi.git
+B: mhi-next
+D: no
+M: Manivannan Sadhasivam <manivannan.sadhasivam@linaro.org>
+
+N: memblock
+U: https://git.kernel.org/pub/scm/linux/kernel/git/rppt/memblock.git
+B: for-next
+D: no
+M: Mike Rapoport <rppt@kernel.org>
+
+N: cxl
+U: https://git.kernel.org/pub/scm/linux/kernel/git/cxl/cxl.git
+B: next
+D: no
+M: Dan Williams <dan.j.williams@intel.com>, Dave Jiang <dave.jiang@intel.com>
+
+N: zstd
+U: https://github.com/terrelln/linux.git
+B: zstd-next
+D: no
+M: Nick Terrell <terrelln@fb.com>
+
+N: efi
+U: https://git.kernel.org/pub/scm/linux/kernel/git/efi/efi.git
+B: next
+D: no
+M: Ard Biesheuvel <ardb@kernel.org>
+
+N: unicode
+U: https://git.kernel.org/pub/scm/linux/kernel/git/krisman/unicode.git
+B: for-next
+D: no
+M: Gabriel Krisman Bertazi <krisman@kernel.org>
+
+N: slab
+U: https://git.kernel.org/pub/scm/linux/kernel/git/vbabka/slab.git
+B: slab/for-next
+D: no
+M: Vlastimil Babka <vbabka@suse.cz>
+
+N: random
+U: https://git.kernel.org/pub/scm/linux/kernel/git/crng/random.git
+B: master
+D: no
+M: Theodore Ts'o <tytso@mit.edu>, Jason A. Donenfeld <Jason@zx2c4.com>
+
+N: landlock
+U: https://git.kernel.org/pub/scm/linux/kernel/git/mic/linux.git
+B: next
+D: no
+M: Mickaël Salaün <mic@digikod.net>
+
+N: sysctl
+U: https://git.kernel.org/pub/scm/linux/kernel/git/sysctl/sysctl.git
+B: sysctl-next
+D: no
+M: Luis Chamberlain <mcgrof@kernel.org>, Kees Cook <kees@kernel.org>, Joel Granados <joel.granados@kernel.org>
+
+N: execve
+U: https://git.kernel.org/pub/scm/linux/kernel/git/kees/linux.git
+B: for-next/execve
+D: no
+M: Kees Cook <kees@kernel.org>
+
+N: bitmap
+U: https://github.com/norov/linux.git
+B: bitmap-for-next
+D: no
+M: Yury Norov <yury.norov@gmail.com>
+
+N: hte
+U: https://git.kernel.org/pub/scm/linux/kernel/git/pateldipen1984/linux.git
+B: for-next
+D: no
+M: Dipen Patel <dipenp@nvidia.com>
+
+N: kspp
+U: https://git.kernel.org/pub/scm/linux/kernel/git/kees/linux.git
+B: for-next/kspp
+D: no
+M: Kees Cook <kees@kernel.org>
+
+N: nolibc
+U: https://git.kernel.org/pub/scm/linux/kernel/git/nolibc/linux-nolibc.git
+B: for-next
+D: no
+M: Shuah Khan <skhan@linuxfoundation.org>, Willy Tarreau <w@1wt.eu>, Thomas Weißschuh <thomas@t-8ch.de>, Paul E. McKenney <paulmck@kernel.org>
+
+N: iommufd
+U: https://git.kernel.org/pub/scm/linux/kernel/git/jgg/iommufd.git
+B: for-next
+D: no
+M: Jason Gunthorpe <jgg@nvidia.com>
+
+N: turbostat
+U: https://git.kernel.org/pub/scm/linux/kernel/git/lenb/linux.git
+B: next
+D: no
+M: Len Brown <lenb@kernel.org>
+
+N: pwrseq
+U: https://git.kernel.org/pub/scm/linux/kernel/git/brgl/linux.git
+B: pwrseq/for-next
+D: no
+M: Bartosz Golaszewski <brgl@bgdev.pl>
+
+N: capabilities-next
+U: https://git.kernel.org/pub/scm/linux/kernel/git/sergeh/linux.git
+B: caps-next
+D: no
+M: Serge Hallyn <sergeh@kernel.org>
+
+N: ipe
+U: https://git.kernel.org/pub/scm/linux/kernel/git/wufan/ipe.git
+B: next
+D: no
+M: Fan Wu <wufan@kernel.org>
+
+N: kcsan
+U: https://git.kernel.org/pub/scm/linux/kernel/git/melver/linux.git
+B: next
+D: no
+M: Marco Elver <elver@google.com>
+
+N: crc
+U: https://git.kernel.org/pub/scm/linux/kernel/git/ebiggers/linux.git
+B: crc-next
+D: no
+M: Eric Biggers <ebiggers@kernel.org>
+
+N: keys-next
+U: https://git.kernel.org/pub/scm/linux/kernel/git/dhowells/linux-fs.git
+B: keys-next
+D: no
+M: David Howells <dhowells@redhat.com>
+
+N: fwctl
+U: https://git.kernel.org/pub/scm/linux/kernel/git/fwctl/fwctl.git
+B: for-next
+D: no
+M: Jason Gunthorpe <jgg@nvidia.com>, Saeed Mahameed <saeedm@nvidia.com>, Dave Jiang <dave.jiang@intel.com>
+
+N: devsec-tsm
+U: https://git.kernel.org/pub/scm/linux/kernel/git/devsec/tsm.git
+B: next
+D: no
+M: Dan Williams <dan.j.williams@intel.com>, <sathyanarayanan.kuppuswamy@linux.intel.com>, <yilun.xu@intel.com>, <sameo@rivosinc.com>, <aik@amd.com>, <suzuki.poulose@arm.com>, <steven.price@arm.com>, <lukas@wunner.de>
+
+N: hisilicon
+U: https://github.com/hisilicon/linux-hisi.git
+B: for-next
+D: no
+M: Wei Xu <xuwei5@hisilicon.com>
+
+N: device-id
+B: device-id-rework
+D: yes
+M: Uwe Kleine-König <u.kleine-koenig@baylibre.com>
+
+N: kthread
+U: https://git.kernel.org/pub/scm/linux/kernel/git/frederic/linux-dynticks.git
+B: for-next
+D: yes
+M: Frederic Weisbecker <frederic@kernel.org>
